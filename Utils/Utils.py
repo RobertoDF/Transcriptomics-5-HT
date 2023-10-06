@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from Utils.Settings import  download_base, url, htr_families, class_to_broad_division, class_to_division
+from Utils.Settings import  download_base, url, htr_families, class_to_broad_division, class_to_division, output_folder_calculations, manifest
 from pathlib import Path
 import matplotlib.colors as plt_colors
 import seaborn as sns
@@ -11,17 +11,26 @@ from allensdk.core.reference_space_cache import ReferenceSpaceCache
 import os
 import matplotlib.pyplot as plt
 
-manifest = json.loads(requests.get(url).text)
 
-output_dir = download_base
-reference_space_key = os.path.join('annotation', 'ccf_2017')
-resolution = 25
-rspc = ReferenceSpaceCache(resolution, reference_space_key, manifest=Path(output_dir) / 'manifest.json')
-# ID 1 is the adult mouse structure graph
-tree = rspc.get_structure_tree(structure_graph_id=1)
+# cmaps
+
+metadata = manifest['file_listing']['WMB-10X']['metadata']
+
+metadata = manifest['file_listing']['WMB-neighborhoods']['metadata']
+rpath = metadata['cluster_group_membership']['files']['csv']['relative_path']
+file = os.path.join( download_base, rpath)
+group_membership = pd.read_csv(file) # cluster can belong to two different groups
+
+neuron_cluster_groups = group_membership["cluster_group_name"].unique()
+
+colors = ['#6FADCF', '#F6AE99', '#73628A', '#4F5D75',
+          '#D6EFFF', '#9B5094', '#BCD39C', '#8FC0A9']
 
 
-## color maps
+# Create a dictionary mapping each value to a color
+cluster_groups_cmap = dict(zip(neuron_cluster_groups, colors))
+
+########
 
 base_colors = sns.color_palette("husl", n_colors=len(htr_families))
 htr_cmap = {}
@@ -31,47 +40,30 @@ for idx, (family, members) in enumerate(htr_families.items()):
     for receptor, shade in zip(members, shades):
         htr_cmap[receptor] = shade
 
+# Convert RGB to HEX
 htr_cmap_rgb = {k: plt_colors.rgb2hex(v) for k, v in htr_cmap.items()}
 
+#########
+metadata = manifest['file_listing']['Allen-CCF-2020']['metadata']
+rpath = metadata['parcellation_to_parcellation_term_membership_acronym']['files']['csv']['relative_path']
+file = os.path.join( download_base, rpath)
+parcellation_annotation = pd.read_csv(file)
+parcellation_annotation.set_index('parcellation_index',inplace=True)
+parcellation_annotation.columns = ['parcellation_%s'% x for x in  parcellation_annotation.columns]
 
+output_dir = output_folder_calculations
+reference_space_key = os.path.join('annotation', 'ccf_2017')
+resolution = 25
+rspc = ReferenceSpaceCache(resolution, reference_space_key, manifest=Path(output_dir) / 'manifest.json')
+# ID 1 is the adult mouse structure graph
+tree = rspc.get_structure_tree(structure_graph_id=1)
 
 broad_division_color_map = {}
 for area in set(class_to_broad_division.values()):
     if area == "Non-neuronal":
-        broad_division_color_map[area] = [.8,.8,.8]
+        broad_division_color_map[area] = [.8, .8, .8]
     else:
-        broad_division_color_map[area] = np.array(tree.get_structures_by_acronym([area])[0]["rgb_triplet"])/255
-
-
-
-metadata = manifest['file_listing']['WMB-10X']['metadata']
-rpath = metadata['example_genes_all_cells_expression']['files']['csv']['relative_path']
-file = os.path.join( download_base, rpath)
-exp = pd.read_csv(file)
-exp.set_index('cell_label',inplace=True)
-exp = exp.sort_index(axis=1)
-
-rpath = metadata['cell_metadata_with_cluster_annotation']['files']['csv']['relative_path']
-file = os.path.join( download_base, rpath )
-cell = pd.read_csv(file, keep_default_na=False)
-cell.set_index('cell_label',inplace=True)
-
-cell["division"] = cell['class'].map(class_to_division)
-cell["broad_division"] = cell['class'].map(class_to_broad_division)
-
-cell['broad_division_color'] = cell['broad_division'].map(broad_division_color_map)
-
-joined = cell.join(exp)
-subsampled = joined.loc[::30]
-
-joined_boolean =  cell.join( exp.astype("bool") )
-
-htrgenes = exp.columns
-
-htrgenes = htrgenes.sort_values()
-
-
-
+        broad_division_color_map[area] = np.array(tree.get_structures_by_acronym([area])[0]["rgb_triplet"]) / 255
 
 
 def Naturize():

@@ -1,5 +1,6 @@
 from pathlib import Path
-
+import json
+import requests
 ## DIRECTORIES
 
 root_data = Path("/alzheimer/Roberto/Allen_Institute/")
@@ -7,7 +8,6 @@ root_github_repo = r"/home/roberto/Github/Transcriptomics-5-HT"
 neuropixel_dataset = Path(f'{root_data}/Visual') # directory Allen dataset
 neuropixel_dataset_behavior = Path(f'{root_data}/Visual_Behavior') # directory Allen dataset behavior
 output_folder_calculations = Path(f"{root_data}/Processed_data_transcriptomics_HTRs")
-output_folder_figures_calculations = Path(f"{root_data}/temp")
 output_folder_processed_lfps = Path(f"{root_data}/Processed_lfps")
 output_folder = Path(f"{root_github_repo}/Output_figures")
 output_folder_supplementary = Path(f"{root_github_repo}/Output_figures/Supplementary")
@@ -20,6 +20,8 @@ download_base = '/alzheimer/Roberto/Allen_Institute/abc_download_root'
 manifest_path = 'releases/%s/manifest.json' % version
 
 url = 'https://allen-brain-cell-atlas.s3-us-west-2.amazonaws.com/' + manifest_path
+
+manifest = json.loads(requests.get(url).text)
 
 # htr Family breakdown
 htr_families = {
@@ -34,18 +36,17 @@ htr_families = {
 
 ## custom divisions
 
-
 class_to_division = {'01 IT-ET Glut': "CTX Glut",
 '02 NP-CT-L6b Glut': "CTX Glut",
-'03 OB-CR Glut':"OLF Glut",
+'03 OB-CR Glut':"CTX Glut",
 '04 DG-IMN Glut':"CTX Glut",
-'05 OB-IMN GABA':"OLF Gaba",
+'05 OB-IMN GABA':"CTX Gaba",
 '06 CTX-CGE GABA': "CTX Gaba",
 '07 CTX-MGE GABA': "CTX Gaba",
 '08 CNU-MGE GABA': "CNU Gaba",
 '09 CNU-LGE GABA': "CNU Gaba",
 '10 LSX GABA': "CNU Gaba",
-'11 CNU-HYa GABA': "CNU-HY Gaba",
+'11 CNU-HYa GABA': "CNU Gaba",
 '12 HY GABA': "HY Gaba",
 '13 CNU-HYa Glut': "HY Glut",
 '14 HY Glut': "HY Glut",
@@ -107,7 +108,9 @@ class_to_broad_division = {
     '34 Immune': "Non-neuronal"
 }
 
-
+order_division = ["CTX Glut", "CTX Gaba", "CNU Gaba","HY Glut","HY Gaba","TH Glut","MB Glut", "MB Gaba","MB Dopa","MB Sero", "HB Glut", "HB Gaba", "CB Glut",  "CB Gaba","Non-neuronal"]
+order_broad_division = ["CTX", "CNU", "MB", "HB", "IB", "CB", "Non-neuronal"]
+neuron_cluster_groups_order = ['Pallium-Glut', 'Subpallium-GABA', 'MB-HB-CB-GABA','MB-HB-Glut-Sero-Dopa', 'HY-EA-Glut-GABA','TH-EPI-Glut','NN-IMN-GC','WholeBrain']
 
 ## ANALYSIS PARAMETERS
 
