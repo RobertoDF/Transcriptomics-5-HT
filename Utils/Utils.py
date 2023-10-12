@@ -10,7 +10,15 @@ import numpy as np
 from allensdk.core.reference_space_cache import ReferenceSpaceCache
 import os
 import matplotlib.pyplot as plt
+import param
+import numpy as np
+import holoviews as hv
+from holoviews.util.transform import dim
+from holoviews.plotting.bokeh.element import ColorbarPlot, LegendPlot
+from holoviews.plotting.bokeh.styles import line_properties, fill_properties
 
+from holoviews.core.dimension import Dimension
+from holoviews.core.data import Dataset
 
 # cmaps
 
@@ -96,7 +104,49 @@ def Naturize_text(legends_supplementary):
 
 
 
+def percentage_non_zero(series):
+    return (series != 0).sum() / len(series) * 100
 
 
+class Donut(Dataset):
+    group = param.String(default='Donut')
+
+    kdims = param.List(default=[Dimension('x')], bounds=(0, 2))
+
+    vdims = param.List(default=[Dimension('y')])
+
+
+
+class DonutPlot(ColorbarPlot, LegendPlot):
+    inner_annulus = param.Number(default=0.5, bounds=(0, 1))
+
+    _plot_methods = dict(single='annular_wedge')
+
+    style_opts = ['cmap'] + line_properties + fill_properties
+
+    def get_data(self, element, ranges, style):
+        vdim = dim(element.vdims[0])
+        normed_dim = np.cumsum(vdim / vdim.sum()) * np.pi * 2
+        angles = normed_dim.apply(element)
+        mapping = dict(x=0, y=0, inner_radius=self.inner_annulus, outer_radius=1, start_angle='start', end_angle='end')
+        data = {'start': np.concatenate([[0], angles[:-1]]), 'end': angles}
+        self._get_hover_data(data, element)
+        return data, mapping, style
+
+    def get_extents(self, element, ranges, range_type='combined'):
+        for d, rs in ranges.items():
+            rs.pop('factors', None)
+        return (-1, -1, 1, 1)
+
+
+hv.Store.register({Donut: DonutPlot}, 'bokeh')
+
+options = hv.Store.options('bokeh')
+
+options.Donut = hv.Options('style', cmap='Category20')
+options.Donut = hv.Options(
+    'plot', show_legend=True, xaxis=None, yaxis=None,
+    tools=['hover'], frame_width=400, frame_height=400,
+    legend_position='right')
 
 
