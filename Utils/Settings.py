@@ -110,7 +110,7 @@ class_to_broad_division = {
 
 order_division = ["CTX Glut", "CTX Gaba", "CNU Gaba","HY Glut","HY Gaba","TH Glut","MB Glut", "MB Gaba","MB Dopa","MB Sero", "HB Glut", "HB Gaba", "CB Glut",  "CB Gaba","Non-neuronal"]
 order_broad_division = ["CTX", "CNU", "MB", "HB", "IB", "CB", "Non-neuronal"]
-neuron_cluster_groups_order = ['Pallium-Glut', 'Subpallium-GABA', 'MB-HB-CB-GABA','MB-HB-Glut-Sero-Dopa', 'HY-EA-Glut-GABA','TH-EPI-Glut','NN-IMN-GC','WholeBrain']
+neuron_cluster_groups_order = ['Pallium-Glut', 'Subpallium-GABA', 'MB-HB-CB-GABA','MB-HB-Glut-Sero-Dopa', 'HY-EA-Glut-GABA','TH-EPI-Glut','NN-IMN-GC']
 
 ## ANALYSIS PARAMETERS
 
