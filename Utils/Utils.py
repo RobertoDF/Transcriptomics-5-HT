@@ -108,4 +108,3 @@ def percentage_non_zero(series):
     return (series != 0).sum() / len(series) * 100
 
 
-
