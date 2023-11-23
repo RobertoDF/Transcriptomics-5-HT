@@ -2,7 +2,7 @@ from Utils.Results_variables import *
 from Utils.Settings import Adapt_for_Nature_style
 from Utils.Utils import Naturize_text
 
-results = {"Transcriptomic overview of 5-HTRs landscape": ""
+results = {"Transcriptomic overview of 5-HT receptors landscape": ""
 
 
 
