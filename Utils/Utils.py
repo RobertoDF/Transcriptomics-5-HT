@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from Utils.Settings import  download_base, url, htr_families, class_to_broad_division, class_to_division, output_folder_calculations, manifest
+from Utils.Settings import  download_base, url, genes_families, class_to_broad_division, class_to_division, output_folder_calculations, manifest
 from pathlib import Path
 import matplotlib.colors as plt_colors
 import seaborn as sns
@@ -40,16 +40,16 @@ cluster_groups_cmap = dict(zip(neuron_cluster_groups, colors))
 
 ########
 
-base_colors = sns.color_palette("husl", n_colors=len(htr_families))
-htr_cmap = {}
+base_colors = sns.color_palette("husl", n_colors=len(genes_families))
+genes_cmap = {}
 
-for idx, (family, members) in enumerate(htr_families.items()):
+for idx, (family, members) in enumerate(genes_families.items()):
     shades = sns.light_palette(base_colors[idx], n_colors=len(members) + 1)[1:]
     for receptor, shade in zip(members, shades):
-        htr_cmap[receptor] = shade
+        genes_cmap[receptor] = shade
 
 # Convert RGB to HEX
-htr_cmap_rgb = {k: plt_colors.rgb2hex(v) for k, v in htr_cmap.items()}
+genes_cmap_rgb = {k: plt_colors.rgb2hex(v) for k, v in genes_cmap.items()}
 
 #########
 metadata = manifest['file_listing']['Allen-CCF-2020']['metadata']

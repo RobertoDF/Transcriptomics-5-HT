@@ -4,10 +4,10 @@ import requests
 ## DIRECTORIES
 
 root_data = Path("/alzheimer/Roberto/Allen_Institute/")
-root_github_repo = r"/home/roberto/Github/Transcriptomics-5-HT"
+root_github_repo = r"/alzheimer/Roberto/Github/Transcriptomics-5-HT"
 neuropixel_dataset = Path(f'{root_data}/Visual') # directory Allen dataset
 neuropixel_dataset_behavior = Path(f'{root_data}/Visual_Behavior') # directory Allen dataset behavior
-output_folder_calculations = Path(f"{root_data}/Processed_data_transcriptomics_HTRs")
+output_folder_calculations = Path(f"{root_github_repo}/Processed")
 output_folder_processed_lfps = Path(f"{root_data}/Processed_lfps")
 output_folder = Path(f"{root_github_repo}/Output_figures")
 output_folder_supplementary = Path(f"{root_github_repo}/Output_figures/Supplementary")
@@ -23,8 +23,11 @@ url = 'https://allen-brain-cell-atlas.s3-us-west-2.amazonaws.com/' + manifest_pa
 
 manifest = json.loads(requests.get(url).text)
 
+
+threshold_expression = 3.5
+
 # htr Family breakdown
-htr_families = {
+genes_families = {
     'Htr1': ['Htr1a', 'Htr1b', 'Htr1d', 'Htr1f'],
     'Htr2': ['Htr2a', 'Htr2b', 'Htr2c'],
     'Htr3': ['Htr3a', 'Htr3b'],
