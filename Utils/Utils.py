@@ -1,24 +1,13 @@
 import os
-import pandas as pd
-from Utils.Settings import  download_base, url, genes_families, class_to_broad_division, class_to_division, output_folder_calculations, manifest
 from pathlib import Path
 import matplotlib.colors as plt_colors
-import seaborn as sns
-import json
-import requests
-import numpy as np
-from allensdk.core.reference_space_cache import ReferenceSpaceCache
-import os
 import matplotlib.pyplot as plt
-import param
 import numpy as np
-import holoviews as hv
-from holoviews.util.transform import dim
-from holoviews.plotting.bokeh.element import ColorbarPlot, LegendPlot
-from holoviews.plotting.bokeh.styles import line_properties, fill_properties
-
-from holoviews.core.dimension import Dimension
-from holoviews.core.data import Dataset
+import pandas as pd
+import seaborn as sns
+from allensdk.core.reference_space_cache import ReferenceSpaceCache
+from Utils.Settings import download_base, genes_families, class_to_broad_division, output_folder_calculations, manifest, \
+    threshold_expression, threshold_expression_MERFISH
 
 # cmaps
 
@@ -107,4 +96,9 @@ def Naturize_text(legends_supplementary):
 def percentage_non_zero(series):
     return (series != 0).sum() / len(series) * 100
 
+def percentage_above_threshold(series):
+    return (series > threshold_expression).sum() / len(series) * 100
+
+def percentage_above_threshold_MER(series):
+    return (series > threshold_expression_MERFISH).sum() / len(series) * 100
 
