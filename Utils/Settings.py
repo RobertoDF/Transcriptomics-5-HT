@@ -28,10 +28,11 @@ url = 'https://allen-brain-cell-atlas.s3-us-west-2.amazonaws.com/' + manifest_pa
 
 manifest = json.loads(requests.get(url).text)
 
+# thresholds expression
 
 threshold_expression = 3.5 # for RNAseq
-
 threshold_expression_MERFISH = .5
+
 # htr Family breakdown
 genes_families = {
     'Htr1': ['Htr1a', 'Htr1b', 'Htr1d', 'Htr1f'],
