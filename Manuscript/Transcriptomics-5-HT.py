@@ -11,7 +11,7 @@ from Utils.Settings import manuscript_folder
 
 doc = DocxTemplate(f"{manuscript_folder}/Manuscript_template.docx")
 
-title = "Spatial Transcriptomic Mapping of the 5-HT Receptor Landscape"
+title = "Transcriptomic Mapping of the 5-HT Receptor Landscape"
 authors = "Roberto De Filippo¹ and Dietmar Schmitz¹²³⁴⁵"
 affiliations =  "¹ Charité Universitätsmedizin Berlin, corporate member of Freie Universität Berlin, Humboldt-Universität" \
                 " zu Berlin, and Berlin Institute of Health; Neuroscience Research Center, 10117 Berlin, Germany. \n" \
