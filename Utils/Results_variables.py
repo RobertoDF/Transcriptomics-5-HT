@@ -122,6 +122,8 @@ for gene in selected_genes:
 
 at_least_5_receptors = pd.DataFrame.from_dict(at_least_5_receptors, orient="index", columns=["Percentage co-localized (%)"])
 
+_ = joined_boolean_with_membership[joined_boolean_with_membership['cluster_group_name']!="WholeBrain"]
+
 at_least_2_receptors_per_group = {}
 for area in _['cluster_group_name'].unique():
     at_least_2_receptors_per_group[area] = (np.sum(_[_['cluster_group_name']==area][selected_genes].sum(axis=1)>=2)/_[_['cluster_group_name']==area].shape[0])*100
