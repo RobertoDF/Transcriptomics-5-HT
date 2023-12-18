@@ -29,9 +29,7 @@ keywords = "5-HT receptors, serotonin"
 acknowledgements = "This study was supported by the German Research Foundation Deutsche Forschungsgemeinschaft (DFG), " \
                    "project 184695641 - SFB 958, project 327654276 - SFB 1315, Germany's Excellence Strategy - Exc-2049-390688087 and by the " \
                    "European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (Grant agreement No. 810580). " \
-                "We thank J.T. Tukker, N. Maier for feedback on an early version of the manuscript and the members of the Schmitz lab for " \
-                   "scientific discussion. We thank Willy Schiegel and Tiziano Zito for technical help with cluster computing. We thank Federico Claudi " \
-                   "for support with brainrender. " \
+                "We thank Willy Schiegel and Tiziano Zito for technical help with cluster computing." \
                 "The authors declare that they have no competing interests. "
 
 """contributions = "Conceptualization, data curation, formal analysis, investigation, visualization: RDF. Writing - original draft: RDF. " \
