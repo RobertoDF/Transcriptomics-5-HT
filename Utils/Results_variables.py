@@ -7,7 +7,6 @@ import anndata
 from pathlib import Path
 from Utils.Settings import class_to_division, class_to_broad_division, output_folder_calculations, manifest, download_base, \
     family_name, threshold_expression
-
 import numpy as np
 
 
@@ -253,3 +252,4 @@ color_dict.update(data_merfish[['parcellation_structure_color', 'parcellation_st
 merfish_by_gene = {}
 for gene in selected_genes:
     merfish_by_gene[gene] = data_merfish[data_merfish['parcellation_category'] == "grey"].groupby(['parcellation_division'])[gene].apply(percentage_above_threshold_MER)
+
