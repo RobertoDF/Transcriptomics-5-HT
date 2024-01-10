@@ -55,6 +55,8 @@ subsampled = joined.loc[::30]
 
 joined_with_membership = cell_with_membership.join(exp)
 
+joined_with_membership = joined_with_membership[joined_with_membership['cluster_group_name']!="WholeBrain"]
+
 joined_boolean_with_membership =  cell_with_membership.join( exp>threshold_expression  )
 subsampled_with_membership = joined_with_membership.loc[::30]
 
@@ -65,40 +67,67 @@ expression_by_neurotransmitter = round(joined.groupby("neurotransmitter")[select
 expression_by_group = round(joined_with_membership.groupby("cluster_group_name")[selected_genes].apply(percentage_above_threshold), 2)
 
 expression_by_class = round(joined_with_membership.groupby("class")[selected_genes].apply(percentage_above_threshold), 2)
-# Assuming 'expression_by_neurotransmitter' is a DataFrame
-correlation_matrix = expression_by_neurotransmitter.corr()
 
-# Mask to get the lower triangle, excluding the diagonal
-mask = np.tril(np.ones_like(correlation_matrix, dtype=bool), k=-1)
 
-lower_triangle_neurotransmitter = correlation_matrix.where(mask)
+# Convert the DataFrame to a NumPy array
+corr_matrix_np = expression_by_neurotransmitter.T.corr().to_numpy()
 
-# Assuming 'expression_by_neurotransmitter' is a DataFrame
-correlation_matrix = expression_by_group.corr()
+# Replace the diagonal elements with NaN
+np.fill_diagonal(corr_matrix_np, np.nan)
 
-# Mask to get the lower triangle, excluding the diagonal
-mask = np.tril(np.ones_like(correlation_matrix, dtype=bool), k=-1)
+# Convert the NumPy array back to a DataFrame if needed
+corr_by_neurotransmitter = pd.DataFrame(corr_matrix_np, index=expression_by_neurotransmitter.index, columns=expression_by_neurotransmitter.index)
 
-lower_triangle_groups = correlation_matrix.where(mask)
 
-correlation_matrix = expression_by_class .corr()
+# Convert the DataFrame to a NumPy array
+corr_matrix_np = expression_by_group.T.corr().to_numpy()
 
-# Mask to get the lower triangle, excluding the diagonal
-mask = np.tril(np.ones_like(correlation_matrix, dtype=bool), k=-1)
+# Replace the diagonal elements with NaN
+np.fill_diagonal(corr_matrix_np, np.nan)
 
-lower_triangle_class = correlation_matrix.where(mask)
+# Convert the NumPy array back to a DataFrame if needed
+corr_by_group = pd.DataFrame(corr_matrix_np, index=expression_by_group.index, columns=expression_by_group.index)
+
+
+
+# Convert the DataFrame to a NumPy array
+corr_matrix_np = expression_by_class.T.corr().to_numpy()
+
+# Replace the diagonal elements with NaN
+np.fill_diagonal(corr_matrix_np, np.nan)
+
+# Convert the NumPy array back to a DataFrame if needed
+corr_by_class = pd.DataFrame(corr_matrix_np, index=expression_by_class.index, columns=expression_by_class.index)
+
+
+# Convert the DataFrame to a NumPy array
+corr_matrix_np = expression_by_class.T.corr().to_numpy()
+
+# Replace the diagonal elements with NaN
+np.fill_diagonal(corr_matrix_np, np.nan)
+
+# Convert the NumPy array back to a DataFrame if needed
+corr_by_class = pd.DataFrame(corr_matrix_np, index=expression_by_class.index, columns=expression_by_class.index)
+
+# Convert the DataFrame to a NumPy array
+corr_matrix_np = exp.corr().to_numpy()
+
+# Replace the diagonal elements with NaN
+np.fill_diagonal(corr_matrix_np, np.nan)
+
+# Convert the NumPy array back to a DataFrame if needed
+corr_by_cell = pd.DataFrame(corr_matrix_np, index=exp.corr().index, columns=exp.corr().index)
+
 
 mean_expression_by_class = round(joined.groupby("class")[selected_genes].apply(percentage_above_threshold).mean(), 2)
 
 sem_expression_by_class = round(joined.groupby("class")[selected_genes].apply(percentage_above_threshold).sem(), 2)
 
 
-correlation_matrix = exp.corr()
 
-# Mask to get the lower triangle, excluding the diagonal
-mask = np.tril(np.ones_like(correlation_matrix, dtype=bool), k=-1)
 
-lower_triangle_corr = round(correlation_matrix.where(mask), 2).stack().sort_values(ascending=False)
+
+
 
 coloc = pd.read_pickle(f"{output_folder_calculations}/total_colocalization_{family_name}.pkl")
 coloc.rename(columns={"Value":"Co-localization"}, inplace=True)
