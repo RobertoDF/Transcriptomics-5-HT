@@ -1,14 +1,19 @@
 import os
 os.chdir("..")
 from Utils.Utils import percentage_above_threshold, percentage_above_threshold_MER
-import pandas as pd
 import time
 import anndata
 from pathlib import Path
 from Utils.Settings import class_to_division, class_to_broad_division, output_folder_calculations, manifest, download_base, \
     family_name, threshold_expression
 import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, accuracy_score
 
+import shap
+from sklearn.metrics import confusion_matrix
 
 metadata = manifest['file_listing']['WMB-10X']['metadata']
 
@@ -47,6 +52,8 @@ maps.set_index('name',inplace=True)
 
 cell_with_membership = cell.reset_index().merge(group_membership[["cluster_group_label", "cluster_alias", "cluster_group_name"]], on='cluster_alias').set_index("cell_label")
 
+cell_with_membership = cell_with_membership[cell_with_membership['cluster_group_name']!="WholeBrain"]
+
 selected_genes = exp.columns.sort_values()
 
 joined = cell.join(exp)
@@ -54,8 +61,6 @@ joined_boolean =  cell.join( exp>threshold_expression  )
 subsampled = joined.loc[::30]
 
 joined_with_membership = cell_with_membership.join(exp)
-
-joined_with_membership = joined_with_membership[joined_with_membership['cluster_group_name']!="WholeBrain"]
 
 joined_boolean_with_membership =  cell_with_membership.join( exp>threshold_expression  )
 subsampled_with_membership = joined_with_membership.loc[::30]
@@ -282,3 +287,62 @@ merfish_by_gene = {}
 for gene in selected_genes:
     merfish_by_gene[gene] = data_merfish[data_merfish['parcellation_category'] == "grey"].groupby(['parcellation_division'])[gene].apply(percentage_above_threshold_MER)
 
+
+sel = "neurotransmitter"  # "cluster_group_name"#"neurotransmitter"
+
+
+def decoddddddd(joined_boolean, sel):
+    df = joined_boolean[[sel] + list(selected_genes)]
+
+    df.set_index(sel, inplace=True)
+
+    # Assuming 'df' is your DataFrame
+    X = df  # Features (Htr expression levels)
+    y = df.index  # Target (neurotransmitter type)
+
+    # Split the data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05, stratify=y)
+
+    # Initialize the Random Forest classifier
+    # You can adjust 'n_estimators' and 'max_depth' based on your dataset and computational resources
+    rf_classifier = RandomForestClassifier(n_estimators=10, max_depth=10, n_jobs=30, class_weight='balanced')
+    # rf_classifier = HistGradientBoostingClassifier( class_weight='balanced')
+
+    # Train the model
+    rf_classifier.fit(X_train, y_train)
+
+    # Make predictions
+    y_pred = rf_classifier.predict(X_test)
+
+    # Evaluate the model
+    accuracy = accuracy_score(y_test, y_pred) * 100
+    print("Accuracy:", accuracy)
+    report = classification_report(y_test, y_pred, output_dict=True)
+    print("\nClassification Report:\n", classification_report(y_test, y_pred))
+
+    cm = confusion_matrix(y_test, y_pred, normalize="true")
+
+    cm = pd.DataFrame(cm, columns=y_test.astype("category").categories,
+                      index=y_test.astype("category").categories) * 100
+
+    X_sample = X_test.sample(n=10000, weights=y_test.map(10000 / y_test.value_counts()), random_state=4)
+
+    # Calculate SHAP values
+    explainer = shap.TreeExplainer(rf_classifier, n_jobs=40)
+    shap_values = explainer.shap_values(X_sample)
+
+    out = []
+    for i in range(len(shap_values)):
+        out.append(pd.Series(np.abs(shap_values[i]).mean(0), name=sorted(joined_boolean[sel].unique())[i],
+                             index=X_test.columns))
+
+    shap_matrix = pd.concat(out, axis=1).T
+
+    return cm, shap_matrix, accuracy, report
+
+
+cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter = decoddddddd(joined_boolean, sel)
+
+sel = "cluster_group_name"#"class"#"cluster_group_name"#"neurotransmitter"
+
+cm_neighborood, shap_matrix_neighborood, accuracy_neighborood, report_neighborood = decoddddddd(joined_boolean_with_membership, sel);
