@@ -37,6 +37,8 @@ for idx, (family, members) in enumerate(genes_families.items()):
     for receptor, shade in zip(members, shades):
         genes_cmap[receptor] = shade
 
+genes_cmap ["Any Htr"] = "#494949"
+
 # Convert RGB to HEX
 genes_cmap_rgb = {k: plt_colors.rgb2hex(v) for k, v in genes_cmap.items()}
 
