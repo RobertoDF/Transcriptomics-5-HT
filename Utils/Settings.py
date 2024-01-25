@@ -31,7 +31,8 @@ manifest = json.loads(requests.get(url).text)
 # thresholds expression
 
 threshold_expression = 3.5 # for RNAseq
-threshold_expression_MERFISH = .5
+threshold_expression_MERFISH = .3
+threshold_enriched_clusters = 70 # percentage cells expressing receptor to be considered an enriched cluster
 
 # htr Family breakdown
 genes_families = {
