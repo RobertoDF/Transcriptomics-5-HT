@@ -128,5 +128,5 @@ neuron_cluster_groups_order = ['Pallium-Glut', 'Subpallium-GABA', 'MB-HB-CB-GABA
 
 # Nature style figure letters
 
-Adapt_for_Nature_style = False
+Adapt_for_Nature_style = True
 

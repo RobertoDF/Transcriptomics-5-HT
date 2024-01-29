@@ -346,3 +346,14 @@ cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter = d
 sel = "cluster_group_name"#"class"#"cluster_group_name"#"neurotransmitter"
 
 cm_neighborood, shap_matrix_neighborood, accuracy_neighborood, report_neighborood = decoddddddd(joined_boolean_with_membership, sel);
+
+sel = "class"#"class"#"cluster_group_name"#"neurotransmitter"
+
+cm_class, shap_matrix_class, accuracy_class, report_class = decoddddddd(joined_boolean, sel);
+
+recall_values = report_class.loc['recall']
+selected_indices = recall_values[recall_values > 0.4].index.values
+
+# Join the values with commas, and "and" before the last value
+formatted_class_string = ', '.join(selected_indices[:-1]) + ', and ' + selected_indices[-1] if len(selected_indices) > 1 else selected_indices[0]
+
