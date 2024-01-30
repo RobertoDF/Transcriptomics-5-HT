@@ -108,7 +108,7 @@ results = {"Transcriptomic overview of 5-HT receptors landscape":
                           f"Also in this case 01 IT-ET Glut exhibited the highest absolute number of Htr1b expessing cells."
                           f"{perc_enriched_htr1b}% of Htr1b expressing cells belonged to highly enriched clusters and"
                           f"striatum (STR) showed by far the highest prevalence with "
-                          f">60% (Figure 3D-E-F). Surprisongly, Caudoputamen (CP) showed a prevalence of almost 100%. Nucleus accumbens (ACB) olfactory tubercle (OT), "
+                          f">60% (Figure 3D-E-F). Surprisongly, Caudoputamen (CP) showed a prevalence of >40%. Nucleus accumbens (ACB) olfactory tubercle (OT), "
                           f"lateral septal nucleus (LSc) and the parabigeminal nucleus (PBG) all exhibited a prevalence of >50%. "
                           
                           f"Htr1d was expressed at a much lower level, never exceeding 7% prevalence in any neighborhood (Supplementary Figure 5A). "
@@ -119,16 +119,19 @@ results = {"Transcriptomic overview of 5-HT receptors landscape":
                           f"The paraventricular nucleus of the thalamus (PT and PVT) showed the highest prevalence of around 10% (Supplementary Figure 5D-E-F), however, the triangular nucleaus of septum (TRS) located in the pallidum (PAL) division, was "
                           f"the structure with highest prevalence. "
                          
-                          f"Htr1f showed the highest expression of all 5-HT receptors in the RNA-seq dataset. Higher prevalence is found in the Pallium and Subpallium groups (Figure 5A), reaching almost 50%. "
-                          f"Htr1f was found to co-localize the most with Htr2a and Htr2c (Figure 5B). Such high prevalence caused, however, lower levels of colocalization (Figure 5B). "
+                          f"Htr1f showed the highest expression of all 5-HT receptors in the RNA-seq dataset. Higher prevalence is found in the Pallium and Subpallium groups (Figure 4A),"
+                          f" reaching almost 50%. Other groups showed a prevalence of 30-40% with TH-EPI-Glut at around 20% (Figure 4A). "
+                          f"Htr1f was found to colocalize the most with Htr2a and Htr2c (Figure 4B). Such high prevalence caused, however, lower levels of colocalization (Figure 4B). "
                           f"Notably, the slope of the linear regression between values provided by RNA-seq and MERFISH was "
-                          f"significantly lower (Figure 5C). The two datasets are still highly correlated, half of the variability is shared. "
+                          f"significantly lower (Figure 4C). The two datasets are still highly correlated, half of the variability is shared. "
                           f"Spatial distribution showed a peculiarly asymettric pattern where expression was concentrated in the most anterior regions. Highest expression was observed in OLF, "
-                          f"reaching over 20% consistently (Figure 5D-E-F). Specifically, highest expression was observed in the main (MOB) and accessory (AOB) olfactory bulbs. "
+                          f"reaching over 20% consistently (Figure 4D-E-F). Specifically, highest expression was observed in the main (MOB) and accessory (AOB) olfactory bulbs. "
                           f"Both Htr5a and Htr5b were not included in the MERFISH dataset, therefore we do not have any spatial information regarding these two receptors. "
-                          f"Htr5a was expressed at 10-15% prevalence across all groups with the exception of NN-IMN-GC (Supplementary Figure #) and colocalized the most with Htr1f, Htr2c and Htr2a. "
+                          f"Htr5a was expressed at 10-15% prevalence across all groups with the exception of NN-IMN-GC (Supplementary Figure #) "
+                          f"and colocalized the most with Htr1f, Htr2c and Htr2a. "
                           f"Prevalence a across did not show any clear peaks. "
-                          f"Htr5b was expressed at a much lower level (Supplementary Figure #). Interestingly two classes accounted for the majority of the expression: 17 MH-LH Glut and 22 MB-HB Sero. ",
+                          f"Htr5b was expressed at a much lower level (Supplementary Figure #). "
+                          f"Interestingly two classes accounted for the majority of the expression: 17 MH-LH Glut and 22 MB-HB Sero. ",
 
            "Htr2": "The Htr2 family is mainly linked to  Gq/11 and causes excitation by increasing intracellular Ca2+. Htr2a, famous for being instrumental in mediating the effects of psychedelics {Nichols, 2016 #854},"
                    " is found across the brain with highest prevalence in cortical groups, Pallium-Glut and Subpallium-GABA (Figure 6A). "
