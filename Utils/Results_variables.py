@@ -285,11 +285,6 @@ color_dict = data_merfish[['parcellation_division_color', 'parcellation_division
 color_dict.update(data_merfish[['parcellation_structure_color', 'parcellation_structure']].drop_duplicates().set_index(
     'parcellation_structure').to_dict()['parcellation_structure_color'])
 
-merfish_by_gene = {}
-for gene in selected_genes:
-    merfish_by_gene[gene] = data_merfish[data_merfish['parcellation_category'] == "grey"].groupby(['parcellation_division'])[gene].apply(percentage_above_threshold_MER)
-
-
 sel = "neurotransmitter"  # "cluster_group_name"#"neurotransmitter"
 
 
@@ -382,3 +377,9 @@ coloc_matrix = round(pd.DataFrame.from_dict(out), 2)
 gene="Htr1a"
 clu_by_expr = joined.groupby("cluster")[gene].apply(percentage_above_threshold).sort_values(ascending=False)
 perc_enriched_htr1a = round((joined_boolean[joined_boolean["cluster"].isin(clu_by_expr[clu_by_expr > threshold_enriched_clusters].index)][gene].sum() /joined_boolean[gene].sum())*100, 2)
+gene="Htr1b"
+clu_by_expr = joined.groupby("cluster")[gene].apply(percentage_above_threshold).sort_values(ascending=False)
+perc_enriched_htr1b = round((joined_boolean[joined_boolean["cluster"].isin(clu_by_expr[clu_by_expr > threshold_enriched_clusters].index)][gene].sum() /joined_boolean[gene].sum())*100, 2)
+gene="Htr1d"
+clu_by_expr = joined.groupby("cluster")[gene].apply(percentage_above_threshold).sort_values(ascending=False)
+perc_enriched_htr1d = round((joined_boolean[joined_boolean["cluster"].isin(clu_by_expr[clu_by_expr > threshold_enriched_clusters].index)][gene].sum() /joined_boolean[gene].sum())*100, 2)
