@@ -5,7 +5,7 @@ import time
 import anndata
 from pathlib import Path
 from Utils.Settings import class_to_division, class_to_broad_division, output_folder_calculations, manifest, download_base, \
-    family_name, threshold_expression
+    family_name, threshold_expression, threshold_enriched_clusters
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -378,3 +378,7 @@ for i, neigh in enumerate(['Pallium-Glut',
             out[neigh] = coloc[coloc["Colocalized (%)"]<100].groupby("Gene2")["Colocalized (%)"].mean()
 
 coloc_matrix = round(pd.DataFrame.from_dict(out), 2)
+
+gene="Htr1a"
+clu_by_expr = joined.groupby("cluster")[gene].apply(percentage_above_threshold).sort_values(ascending=False)
+perc_enriched_htr1a = round((joined_boolean[joined_boolean["cluster"].isin(clu_by_expr[clu_by_expr > threshold_enriched_clusters].index)][gene].sum() /joined_boolean[gene].sum())*100, 2)
