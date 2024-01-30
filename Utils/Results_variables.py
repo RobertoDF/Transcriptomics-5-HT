@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
-
+import pickle
 import shap
 from sklearn.metrics import confusion_matrix
 
@@ -124,23 +124,25 @@ np.fill_diagonal(corr_matrix_np, np.nan)
 corr_by_cell = pd.DataFrame(corr_matrix_np, index=exp.corr().index, columns=exp.corr().index)
 
 
+
+df_melted = corr_by_cell.reset_index().melt(id_vars='index', var_name='Gene2', value_name='Value')
+df_melted['Gene_Pair'] = df_melted['index'] + '-' + df_melted['Gene2']
+corr_by_cell = df_melted[['Gene_Pair', 'Value']]
+corr_by_cell["Value"] = round(corr_by_cell["Value"], 3)
+corr_by_cell.set_index("Gene_Pair", inplace=True)
+corr_by_cell = corr_by_cell.sort_values("Value", ascending=False)
+corr_by_cell = corr_by_cell.iloc[::2]
+
+
 mean_expression_by_class = round(joined.groupby("class")[selected_genes].apply(percentage_above_threshold).mean(), 2)
 
 sem_expression_by_class = round(joined.groupby("class")[selected_genes].apply(percentage_above_threshold).sem(), 2)
 
 
-
-
-
-
-
 coloc = pd.read_pickle(f"{output_folder_calculations}/total_colocalization_{family_name}.pkl")
-coloc.rename(columns={"Value":"Co-localization"}, inplace=True)
-coloc['Gene1'] = pd.Categorical(coloc['Gene1'], categories=selected_genes, ordered=True)
 
-coloc['Gene2'] = pd.Categorical(coloc['Gene2'], categories=selected_genes, ordered=True)
-coloc = coloc[coloc["Co-localization"]<100]
-mean_coloc = round(coloc.groupby("Gene2")["Co-localization"].mean(), 2)
+with open(f"{output_folder_calculations}/total_colocalization_{family_name}_by_neigh.pkl", "rb") as pkl_file:
+    coloc_by_neigh = pickle.load(pkl_file)
 
 _ = joined_boolean[selected_genes]
 at_least_2_receptors = {}
@@ -341,7 +343,7 @@ def decoddddddd(joined_boolean, sel):
     return cm, shap_matrix, accuracy, report
 
 
-cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter = decoddddddd(joined_boolean, sel)
+cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter, report_neurotransmitter  = decoddddddd(joined_boolean, sel)
 
 sel = "cluster_group_name"#"class"#"cluster_group_name"#"neurotransmitter"
 
@@ -351,9 +353,28 @@ sel = "class"#"class"#"cluster_group_name"#"neurotransmitter"
 
 cm_class, shap_matrix_class, accuracy_class, report_class = decoddddddd(joined_boolean, sel);
 
+report_class = pd.DataFrame(report_class)#.loc["recall"]
+
 recall_values = report_class.loc['recall']
 selected_indices = recall_values[recall_values > 0.4].index.values
 
 # Join the values with commas, and "and" before the last value
 formatted_class_string = ', '.join(selected_indices[:-1]) + ', and ' + selected_indices[-1] if len(selected_indices) > 1 else selected_indices[0]
 
+
+subset = joined_with_membership[joined_with_membership["cluster_group_name"] == 'TH-EPI-Glut']
+correlation_TH_EPI = subset[exp.columns].corr()
+correlation_TH_EPI = round(correlation_TH_EPI[correlation_TH_EPI<1], 3)
+
+
+out = {}
+for i, neigh in enumerate(['Pallium-Glut',
+     'Subpallium-GABA',
+     'MB-HB-CB-GABA',
+     'MB-HB-Glut-Sero-Dopa',
+     'HY-EA-Glut-GABA',
+     'TH-EPI-Glut']):
+            coloc = coloc_by_neigh[neigh]
+            out[neigh] = coloc[coloc["Colocalized (%)"]<100].groupby("Gene2")["Colocalized (%)"].mean()
+
+coloc_matrix = round(pd.DataFrame.from_dict(out), 2)
