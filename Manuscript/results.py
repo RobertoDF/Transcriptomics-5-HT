@@ -75,7 +75,7 @@ results = {"Transcriptomic overview of 5-HT receptors landscape":
                f"Ht3 were present only in a small minority of cortical inhibitory neurons."
                f"In the telencephalon, the absolute majority of both Pallium-Glut "
                f"and Subpallium-Gaba cells were linked to Htr1/5, around one quarter of cells instead featured Htr2 as primary effector. Subcortical cells exhibited "
-               f"a more balanced division without any absolute majority. "
+               f"a more balanced proportion without any absolute majority and a considerable presence of Htr4/6/7.. "
                f" In the following sections we will take a deeper look at "
                "Htrs grouped by effector and we will take advantage of the spatial information provided by the MERFISH dataset of {Zhang, 2023 #2887} regarding 9 Htrs. ",
 
