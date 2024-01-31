@@ -119,7 +119,8 @@ class_to_broad_division = {
     '34 Immune': "Non-neuronal"
 }
 
-order_division = ["CTX Glut", "CTX Gaba", "CNU Gaba","HY Glut","HY Gaba","TH Glut","MB Glut", "MB Gaba","MB Dopa","MB Sero", "HB Glut", "HB Gaba", "CB Glut",  "CB Gaba","Non-neuronal"]
+order_division = ['Isocortex', 'OLF', 'HPF', 'CTXsp', 'STR', 'PAL', 'TH', 'HY', 'MB',
+       'P',  'MY', 'CB',]
 order_broad_division = ["CTX", "CNU", "MB", "HB", "IB", "CB", "Non-neuronal"]
 neuron_cluster_groups_order = ['Pallium-Glut', 'Subpallium-GABA', 'MB-HB-CB-GABA','MB-HB-Glut-Sero-Dopa', 'HY-EA-Glut-GABA','TH-EPI-Glut','NN-IMN-GC']
 
