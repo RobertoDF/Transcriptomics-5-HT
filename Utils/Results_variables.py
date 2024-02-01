@@ -14,6 +14,7 @@ from sklearn.metrics import classification_report, accuracy_score
 import pickle
 import shap
 from sklearn.metrics import confusion_matrix
+from scipy.stats import pearsonr as pearsonr
 
 metadata = manifest['file_listing']['WMB-10X']['metadata']
 
@@ -383,3 +384,10 @@ perc_enriched_htr1b = round((joined_boolean[joined_boolean["cluster"].isin(clu_b
 gene="Htr1d"
 clu_by_expr = joined.groupby("cluster")[gene].apply(percentage_above_threshold).sort_values(ascending=False)
 perc_enriched_htr1d = round((joined_boolean[joined_boolean["cluster"].isin(clu_by_expr[clu_by_expr > threshold_enriched_clusters].index)][gene].sum() /joined_boolean[gene].sum())*100, 2)
+
+
+data = pd.concat([exp[exp>0].mean(), (((exp>threshold_expression).sum(axis=0)/exp.shape[0])*100)], axis=1)
+data.columns = ["log(CPM)", "Prevalence (%)"]
+
+r, p = pearsonr(data["log(CPM)"], data["Prevalence (%)"])
+r_squared_prevalence_CPM = round(r ** 2, 2)
