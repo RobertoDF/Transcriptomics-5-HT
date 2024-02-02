@@ -23,7 +23,7 @@ affiliations =  "¹ Charité Universitätsmedizin Berlin, corporate member of Fr
                 "⁵ Humboldt-Universität zu Berlin, Bernstein Center for Computational Neuroscience, Philippstr. 13, 10115 Berlin, Germany. "\
 
 correspondence_to = "roberto.de-filippo@charite.de"
-keywords = "5-HT receptors, serotonin"
+keywords = "5-HT receptors, Transcriptomics, 5-HT, Serotonin"
 
 acknowledgements = "This study was supported by the German Research Foundation Deutsche Forschungsgemeinschaft (DFG), " \
                    "project 184695641 - SFB 958, project 327654276 - SFB 1315, Germany's Excellence Strategy - Exc-2049-390688087 and by the " \
@@ -31,22 +31,20 @@ acknowledgements = "This study was supported by the German Research Foundation D
                 "We thank Willy Schiegel and Tiziano Zito for technical help with cluster computing. " \
                 "The authors declare that they have no competing interests. "
 
-"""contributions = "Conceptualization, data curation, formal analysis, investigation, visualization: RDF. Writing - original draft: RDF. " \
+contributions = "Conceptualization, data curation, formal analysis, investigation, visualization: RDF. Writing - original draft: RDF. " \
                 "Writing - review & editing: RDF, DS. " \
                 "Funding acquisition: DS."
-"""
 
-data_availability = "All the code used to process the dataset is available at https://github.com/RobertoDF/De-Filippo-et-al-2022, pre-computed data structures "\
+data_availability = "All the code used to process the dataset is available at https://github.com/RobertoDF/Transcriptomics-5-HT, pre-computed data structures "\
                     "can be downloaded at 10.6084/m9.figshare.20209913. "\
-                    "All figures and text can be reproduced using code present in this repository, each number present in the text is directly "\
-                    "linked to a python data structure. The original dataset is provided by the Allen Institute and available at "\
-                    "https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html."
+                    "All figures and text can be reproduced using code present in this repository. Access to the original datasets is provided by the Allen Institute at "\
+                    "https://portal.brain-map.org/atlases-and-data/bkp/abc-atlas."
 
 context = {'title': title, "authors": authors, "affiliations": affiliations, "correspondence_to": correspondence_to,
            "keywords": keywords, "abstract": abstract, "introduction": introduction,
            "discussion": discussion, "methods": methods, "results": results, "legends": legends, "supplementary_legends": legends_supplementary,
            "acknowledgements": acknowledgements,
-          "data_availability": data_availability}
+          "data_availability": data_availability, "contributions": contributions}
 
 doc.render(context, autoescape=True)
 

@@ -2,7 +2,7 @@ from Utils.Results_variables import *
 from Utils.Settings import Adapt_for_Nature_style
 from Utils.Utils import Naturize_text
 
-results = {"Transcriptomic overview of 5-HT receptors landscape":
+results = {"Htrs expression overview":
                "We analysed the single-cell scRNA-seq dataset provided by the Allen Institute {Yao, 2023 #2828} "
                 "focusing on the expression of Htrs RNA across approximately 4 million brain cells. The scRNA-seq dataset comprehensively encompassed all known 14 Htr subtypes. "
                f"{round(((exp>threshold_expression).sum(axis=1).astype(bool).sum()/exp.shape[0])*100,2)}% of cells expressed RNA of at least one Htr. "
