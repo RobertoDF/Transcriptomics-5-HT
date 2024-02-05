@@ -59,6 +59,11 @@ selected_genes = exp.columns.sort_values()
 
 joined = cell.join(exp)
 joined_boolean =  cell.join( exp>threshold_expression  )
+
+joined_boolean["Number of Htrs"] = joined_boolean[['Htr1a', 'Htr1b', 'Htr1d', 'Htr1f', 'Htr2a',
+       'Htr2b', 'Htr2c', 'Htr3a', 'Htr3b', 'Htr4', 'Htr5a', 'Htr5b', 'Htr6',
+       'Htr7']].sum(axis=1)
+
 subsampled = joined.loc[::30]
 
 joined_with_membership = cell_with_membership.join(exp)

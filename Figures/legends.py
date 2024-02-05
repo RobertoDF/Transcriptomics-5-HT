@@ -15,7 +15,7 @@ legends =  {"Figure 1. Overview of Htrs translation in the RNA-seq dataset.":
                 "(D) Htr expression prevalence in cells grouped byclass. "
                 "(E) Htrs expression correlation matrix. "
                 "(F) Htrs colocalization matrix. Each dot represents the percentage of colocalization of gene on x axis in cells expressing gene on y axis. "
-                "(G) Percentage of cells expressing the gene on x axis expressing at least another Htrs gene (top) or at least other 4 Htrs (bottom). "
+                "(G) Top: Percentage of cells expressing the number of Htrs on the x axis. Percentage of cells expressing the gene on x axis expressing at least another Htrs gene (middle) or at least other 4 Htrs (bottom). "
                 "(H) Pie charts representing the proportion of principal Htrs grouped by intracellular effector for each neighborhood. Principal effector was "
                 "identified by summing the expression of Htrs. Each number represents the "
                 "number of cells in thousands. "}
