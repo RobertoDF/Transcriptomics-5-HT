@@ -20,11 +20,20 @@ discussion = ("In this work we described the main transcriptional features of ea
               "Htr6 does not feature any enriched cluster, some cells in CA3 transcribed this Htr. "
               "Htr7 is widely transcribed in subcortical structures, especially in some TH nuclei (PF, PVT, IAD and PT), the mammillary complex (MM and PMd), "
               "the lateral septal nucleus (LSv) and the fasciola cinerea of the HPF. "
-              "Our analysis is in no way exhaustive and it is limited in scope by the costraints of a traditional scientific articles. To bypass this limit and, at the same time, "
-              "provide the ability to explore the 5-HT transcription landscape at different depth of the atlas classification we provide a custom online visualizer. The visualizer enbles "
-              "the exploration of: Htrs transcription in the MERFISh dataset; the prevalence of each Htr across neighborhoods,class, subclass, supertype and clusters; "
-              "an overview of Htrs prevalence across classes and subclasses; and an overview of Htrs prevalence across all brain divisions and structures optionally grouped by neurotransmitter release. "
-              "" 
-              "")
+              "Our analysis is in no way exhaustive and it is limited in scope by the costraints of a traditional scientific article. To bypass this limit and, at the same time, "
+              "provide the ability to explore the 5-HT transcription landscape at different depths we provide a custom online visualizer. The visualizer enbles "
+              "the exploration of: Htrs transcription in the MERFISH dataset; the prevalence of each Htr across neighborhoods, class, subclass, supertype and clusters; "
+              "an overview of Htrs prevalence across classes and subclasses; "
+              "and an overview of Htrs prevalence across all brain divisions and structures optionally grouped by neurotransmitter release. Our entire "
+              "analysis pipeline can be easily modified to enable the exploration of different families of genes. "
+              "Instructions are available in 'Jupyter notebooks structures' in the methods section. "
+              "One constraint of our study is the indirect characterization of Htrs through the detection of RNA molecules, rather than direct assessment of their presence. "
+              "However, this potential limitation is mitigated by the fact that mRNA levels are frequently a reliable indicator of receptor expression {Vilaró, 2020 #2939}. Conversely, "
+              "while mapping receptors directly allows for precise localization, it fails to differentiate between pre- and postsynaptic expression, "
+              "an important aspect of understanding receptor function and distribution. "
+              "This lack of specificity becomes particularly problematic in the context of Sero neurons, which have extensive projections throughout the brain and exhibit diverse autoreceptors. "
+              "This complexity is underscored both in our findings and in previous research, highlighting the intricate regulatory "
+              "mechanisms of serotonin neurotransmission {Hjorth, 1991 #2932; Haj-Dahmane, 1991 #2924}. "
+              "Our exploration of the Htrs landscape represents a substantial advancement, contributing to our understanding of the 5-HT system's role in brain function and behavior. ")
 
 

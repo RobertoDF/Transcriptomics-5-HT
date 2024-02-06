@@ -20,13 +20,13 @@ legends =  {"Figure 1. Overview of Htrs translation in the RNA-seq dataset.":
                 "identified by summing the expression of Htrs. Each number represents the "
                 "number of cells in thousands. "}
 
-legends.update({f"{gene} transcription": f"(A) On the left, {gene} prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset.. On the right, amount of {gene} RNA detected using "
+legends.update({f"Figure {n+1}. {gene} transcription": f"(A) On the left, {gene} prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, amount of {gene} RNA detected using "
                                               f"RNA-seq (top) and MERFISH (bottom). "
                                               f"(B) Amount of colocalization with each Htrs by cells expressing {gene} RNA (left). Number of Htrs RNA detected in cells "
                                               f"expressing {gene} RNA (right). "
                                               f"(C) Prevalence of {gene} RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On te right, absolute number of cells expressing {gene} RNA by class ranked in descending order (top ten). "
                                               f"(D) Prevalence of {gene} RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing {gene} RNA that belongs to enriched clusters. "
-                                              f"(E) Prevalence (top) and average amount of RNA expression across the antero-posteroir axis. "
+                                              f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posteroir axis f cells belonging to enriched clusters. "
                                               f"(F) Expression of {gene} RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. "
-                                              f"  " for gene in selected_genes_cl})
+                                              f"  " for n, gene in enumerate(selected_genes_cl)})

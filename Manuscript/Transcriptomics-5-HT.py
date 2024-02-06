@@ -23,7 +23,7 @@ affiliations =  "¹ Charité Universitätsmedizin Berlin, corporate member of Fr
                 "⁵ Humboldt-Universität zu Berlin, Bernstein Center for Computational Neuroscience, Philippstr. 13, 10115 Berlin, Germany. "\
 
 correspondence_to = "roberto.de-filippo@charite.de"
-keywords = "5-HT receptors, Transcriptomics, 5-HT, Serotonin"
+keywords = "5-HT receptors, Transcriptomics, 5-HT, Serotonin. "
 
 acknowledgements = "This study was supported by the German Research Foundation Deutsche Forschungsgemeinschaft (DFG), " \
                    "project 184695641 - SFB 958, project 327654276 - SFB 1315, Germany's Excellence Strategy - Exc-2049-390688087 and by the " \
@@ -35,8 +35,7 @@ contributions = "Conceptualization, data curation, formal analysis, investigatio
                 "Writing - review & editing: RDF, DS. " \
                 "Funding acquisition: DS."
 
-data_availability = "All the code used to process the dataset is available at https://github.com/RobertoDF/Transcriptomics-5-HT, pre-computed data structures "\
-                    "can be downloaded at 10.6084/m9.figshare.20209913. "\
+data_availability = "All the code used to process the dataset is available at https://github.com/RobertoDF/Transcriptomics-5-HT. "\
                     "All figures and text can be reproduced using code present in this repository. Access to the original datasets is provided by the Allen Institute at "\
                     "https://portal.brain-map.org/atlases-and-data/bkp/abc-atlas."
 

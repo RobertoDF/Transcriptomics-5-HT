@@ -217,7 +217,7 @@ results = {"Htrs transcription overview":
                    f"The majority of cells transcribing Htr2c RNA belonged to enriched clusters. "
                    f"Highest prevalence was found in STR. Similarly to Htr1b, ACB, CP and OT exhibited the highest prevalence (Figure 6D-E-F). Isocortex prevalence derived from the "
                    f"unique transcription in excitatory neurons of the ventral part of the RSP, "
-                   f"curiosly the area with lowest transcription of the otherwise highly prevlent, Htr1f. High prevalence was observed also in excitatory neurons of "
+                   f"curiosly the area with lowest transcription of Htr1f, otherwise highly prevalent in the all other cortical regions. High prevalence was observed also in excitatory neurons of "
                    f"the anterior olfactory nucleus (AON), and piriform area (PIR and PAA). Excitatory neurons of the amygdala (LA and BLA)"
                    f" also exhibited high transcription. Htr2c RNA was found across a variety of structures also in the MB (non in Sero neurons), pons (P), medulla (MY) and cerebellum (CB).  ",
 
