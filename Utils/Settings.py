@@ -3,8 +3,19 @@ import json
 import requests
 
 
+# gene Family breakdown
 
 family_name = "htr"
+
+genes_families = {
+    'Htr1': ['Htr1a', 'Htr1b', 'Htr1d', 'Htr1f'],
+    'Htr2': ['Htr2a', 'Htr2b', 'Htr2c'],
+    'Htr3': ['Htr3a', 'Htr3b'],
+    'Htr4': ['Htr4'],
+    'Htr5': ['Htr5a', 'Htr5b'],
+    'Htr6': ['Htr6'],
+    'Htr7': ['Htr7']
+}
 
 ## DIRECTORIES
 
@@ -34,16 +45,7 @@ threshold_expression = 3.5 # for RNAseq
 threshold_expression_MERFISH = .3
 threshold_enriched_clusters = 70 # percentage cells expressing receptor to be considered an enriched cluster
 
-# htr Family breakdown
-genes_families = {
-    'Htr1': ['Htr1a', 'Htr1b', 'Htr1d', 'Htr1f'],
-    'Htr2': ['Htr2a', 'Htr2b', 'Htr2c'],
-    'Htr3': ['Htr3a', 'Htr3b'],
-    'Htr4': ['Htr4'],
-    'Htr5': ['Htr5a', 'Htr5b'],
-    'Htr6': ['Htr6'],
-    'Htr7': ['Htr7']
-}
+
 
 ## custom divisions
 
