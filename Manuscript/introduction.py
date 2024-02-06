@@ -17,9 +17,9 @@ introduction = ("5-HT stands as a pivotal neuromodulator within the brain, orche
                 "incorporating the associated hierarchical clustering of cells at four nested levels. Spatial distribution data was obtained from "
                 "a MERFISH dataset provided by Harvard University {Zhang, 2023 #2887}, "
                 "offering a unique window into the expression patterns of these receptors. Our analysis reveals new patterns of receptor "
-                "expression with an unparalleled level of detail, and for each Htr we compare our results with the exisiting body of literature. "
+                "expression with an unparalleled level of detail, and for each Htr we compare our results with the exisiting literature. "
                 "To facilitate broader exploration of the Htr landscape throughout the brain, "
-                "we have developed an online visualization tool. This platform enables the seamless exploration of both the RNA-seq and MERFISH datasetd at different levels of "
+                "we have developed an online visualization tool. This platform enables the seamless exploration of both the RNA-seq and MERFISH dataset at different levels of "
                 "granularity, providing a comprehensive view of the 5-HT receptor distribution. ")
 
 

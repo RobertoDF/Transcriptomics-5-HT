@@ -3,13 +3,18 @@
 
 legends_supplementary =  {
     "Supplementary Figure 1. Htrs transcription and hierarchical clustering visualization.":
-                "(A) . "
-                "(B) . "
-                "(C) . ", 
+                "(A) Top: Linear regression model fit between prevalence (y axis) and amount of intracellular expression (x axis) for each Htrs. Bottom: violinplots "
+                "showing distribution of intracellular amount of expression for each Htrs. "
+                "(B) Heatmaps showing relationship between neurotransmitter, class and neighborhoods. "
+                "(C) Barplots representing the size of each group when cells are categorized by neurotransmitter (top), neighborhood (middle) and class (botttom). ",
                 
-    "Supplementary Figure 2. ": "",
-"Supplementary Figure 3. ": "",
-"Supplementary Figure 4. ": "",
+    "Supplementary Figure 2. UMAP distribution of each Htr": "UMAP-associated neurotransmitter, class and dissection region metadata (first row) and UMAP distribution of each Htr.",
+"Supplementary Figure 3. Htrs features across neighborhoods and classes": "(A) Htrs prevalence across neighborhoods (left). Confusion matrix related to the decoding of neighboroods "
+                                                                          "classification from Htrs transcription (middle). SHAP values matrix associated to the neighborhood decoding (right). "
+                                                                          "(B) Confusion matrix related to the decoding of classes "
+                                                                          "classification from Htrs transcription (left). SHAP values matrix associated to the class decoding (right). ",
+"Supplementary Figure 4. Correlation and colocalization patterns across neighborhoods": "(A) Correlation matrices between pairs of Htrs  in each neighborhood. "
+                                                                                        "(B) Colocalization matrices of Htrs transcription in each neighborhood. ",
 "Supplementary Figure 5. Htr1d transcription": f"(A) On the left, Htr1d prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, amount of Htr1d RNA detected using "
                                               f"RNA-seq (top) and MERFISH (bottom). "
                                               f"(B) Amount of colocalization with each Htrs by cells expressing Htr1d RNA (left). Number of Htrs RNA detected in cells "
