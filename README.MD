@@ -1,6 +1,6 @@
 # 🧬Transcriptomic Mapping of the 5-HT Receptor Landscape🧬
 
-[Online visualizer](https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics) 🧠
+##[Online visualizer](https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics) 🧠
 
 The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, remaing tabs are associated with the RNA-seq dataset. Each tab is associated to different interactive controls and panels. 
 More details in the associated manuscript.
