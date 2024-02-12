@@ -278,14 +278,14 @@ results = {"Htrs transcription overview":
                    "{Walstab, 2010 #2919}. "
                    "Heteromeric receptors containing Htr3b have an increased channel conductance and different selectivity {Davies, 1999 #2920}. "
                    "Htr3a is transcribed almost uniquely in the "
-                   "Subpallium-Gaba neighborood, with a prevalence of ≈8% (Supplementary Figure 10A), specifically in the 06 CTX-CGE GABA class (Supplementary Figure 10C). "
+                   "Subpallium-Gaba neighborood, with a prevalence of ≈8% (Figure 9A), specifically in the 06 CTX-CGE GABA class (Figure 9C). "
                    "It is one of the few Htr, together with Htr3b and Htr1d, "
                    "that is not transcribed the most in absolute numbers in 01 IT-ET glut. It colocalizes mainly "
-                   "with Htr2c and Htr7 (Supplementary Figure 10B). This Htr was mainly trancribed in OLF, CTXsp, HPF and Isocortex (Supplementary Figure 10D) and "
-                   "is most prevalent in the anterior part of the brain, altough, puzzingly, with slightly lower amount of RNA per cell (Supplementary Figure 10E-F). "
+                   "with Htr2c and Htr7 (Figure 9B). This Htr was mainly trancribed in OLF, CTXsp, HPF and Isocortex (Figure 9D) and "
+                   "is most prevalent in the anterior part of the brain, altough, puzzingly, with slightly lower amount of RNA per cell (Figure 9E-F). "
                    "Htr3b was not included in the MERFISH dataset and no cluster was found to be enriched with this receptor. Htr3b was the least "
                    "transcribed Htr gene in the entire RNAseq dataset. "
-                   "Similarly to Htr3a, its transcription was delimited to the 06 CTX-CGE GABA class (Supplementary Figure 11C)."
+                   "Similarly to Htr3a, its transcription was delimited to the 06 CTX-CGE GABA class (Supplementary Figure 10C)."
 
 
            }
