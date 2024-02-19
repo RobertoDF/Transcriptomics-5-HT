@@ -21,7 +21,7 @@ legends =  {"Figure 1. Overview of Htrs translation in the RNA-seq dataset.":
                 "identified by summing the expression of Htrs. Each number represents the "
                 "number of cells in thousands. "}
 
-legends.update({f"Figure {n+1}. {gene} transcription": f"(A) On the left, dotplot representing {gene} prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, violinplots representing the amount of {gene} RNA detected using "
+legends.update({f"Figure {n+2}. {gene} transcription": f"(A) On the left, dotplot representing {gene} prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, violinplots representing the amount of {gene} RNA detected using "
                                               f"RNA-seq (top) and MERFISH (bottom). "
                                               f"(B) Amount of colocalization with each Htrs by cells expressing {gene} RNA (left). Number of Htrs RNA detected in cells "
                                               f"expressing {gene} RNA (right). "
