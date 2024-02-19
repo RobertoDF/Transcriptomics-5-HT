@@ -22,7 +22,7 @@ affiliations =  "¹ Charité Universitätsmedizin Berlin, corporate member of Fr
                 "and Berlin Institute of Health, NeuroCure Cluster of Excellence, 10117 Berlin, Germany. \n"\
                 "⁵ Humboldt-Universität zu Berlin, Bernstein Center for Computational Neuroscience, Philippstr. 13, 10115 Berlin, Germany. "\
 
-correspondence_to = ""#"roberto.de-filippo@charite.de"
+correspondence_to = "roberto.de-filippo@charite.de"
 keywords = "5-HT receptors, Transcriptomics, 5-HT, Serotonin. "
 
 acknowledgements = "This study was supported by the German Research Foundation Deutsche Forschungsgemeinschaft (DFG), " \
