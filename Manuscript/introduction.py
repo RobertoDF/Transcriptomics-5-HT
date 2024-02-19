@@ -13,7 +13,7 @@ introduction = ("5-HT stands as a pivotal neuromodulator within the brain, orche
                 "our ability to dissect gene transcription. Unlike their predecessors, these techniques offer an unparalleled resolution and depth of profiling, "
                 "allowing for the intricate detailing of each Htr's expression patterns. This advanced level of detail enriches our comprehension of 5-HT's roles, "
                 "paving the way for more precise and nuanced interpretations of its influence across neural circuits. "
-                "To elucidate the complexities tied to the distribution of each Htr subtype, we utilized an RNA-seq dataset provided by the Allen Institute {Yao, 2023 #2828}, "
+                "To elucidate the complexities of the distribution of each Htr subtype, we utilized an RNA-seq dataset provided by the Allen Institute {Yao, 2023 #2828}, "
                 "incorporating the associated hierarchical clustering of cells at four nested levels. Spatial distribution data was obtained from "
                 "a MERFISH dataset by Harvard University {Zhang, 2023 #2887}. This approach revealed new patterns of Htrs "
                 "transcription and set a new benchmark for examining their distribution "

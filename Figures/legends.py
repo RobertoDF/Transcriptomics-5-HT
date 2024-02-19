@@ -4,10 +4,11 @@ import pandas as pd
 from Utils.Settings import output_folder_calculations, threshold_expression
 
 gene_filtered  = pd.read_csv(Path(output_folder_calculations, "selected_genes_RNAseq.csv"))
-selected_genes_cl = np.sort(gene_filtered["gene_symbol"].values)
+selected_genes_for_main_fig = ['Htr1a', 'Htr1b', 'Htr1f', 'Htr2a', 'Htr2c',
+      'Htr4', 'Htr7',  'Htr3a',]
 
 
-legends =  {"Figure 1. Overview of Htrs translation in the RNA-seq dataset.":
+legends =  {"Figure 1. Overview of Htrs translation.":
                 "(A) Barplot showing absolute number of cells expressing each Htrs, amount of expression is represented in greyscale, no threshold is applied. "
                 f"Inset shows the prevalence of each Htr using  a threshold (log(CPM)>{threshold_expression}). "
                 "(B) UMAP representation color-coded by neighborhood metadata (left), Htr1 (middle) and Htr2 (right) transcription. "
@@ -30,4 +31,4 @@ legends.update({f"Figure {n+2}. {gene} transcription": f"(A) On the left, dotplo
                                               f"(D) Ranked prevalence of {gene} RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing {gene} RNA that belongs to enriched clusters. "
                                               f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posterior axis of cells belonging to enriched clusters. "
                                               f"(F) Expression of {gene} RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. "
-                                              f"  " for n, gene in enumerate(selected_genes_cl)})
+                                              f"  " for n, gene in enumerate(selected_genes_for_main_fig)})
