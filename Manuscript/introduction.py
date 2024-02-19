@@ -1,4 +1,4 @@
-introduction = ("5-HT stands as a pivotal neuromodulator within the brain, orchestrating a diverse array of behavors and physiological "
+introduction = ("5-HT stands as a pivotal neuromodulator within the brain, orchestrating a diverse array of behaviors and physiological "
                 "processes that include mood regulation {Dayan, 2009 #1401}, memory {Teixeira, 2018 #924}, sleep {Oikonomou, 2019 #347}, feeding {Lee, 2010 #1406}"
                 " and decision-making {Homberg, 2012 #1407}. This broad spectrum of influence is remarkably orchestrated by a limited number of 5-HT releasing "
                 "neurons located in the raphe nuclei, which extend their projections across the entire brain {Descarries, 2010 #937}. The intricacy of the 5-HT "
@@ -12,14 +12,14 @@ introduction = ("5-HT stands as a pivotal neuromodulator within the brain, orche
                 "contributing significantly to our current understanding {Salvan, 2023 #2941}. However, the introduction of single-cell RNA-seq and MERFISH has revolutionized "
                 "our ability to dissect gene transcription. Unlike their predecessors, these techniques offer an unparalleled resolution and depth of profiling, "
                 "allowing for the intricate detailing of each Htr's expression patterns. This advanced level of detail enriches our comprehension of 5-HT's roles, "
-                "paving the way for more precise and nuanced interpretations of its influence across theneural circuits."
+                "paving the way for more precise and nuanced interpretations of its influence across neural circuits. "
                 "To elucidate the complexities tied to the distribution of each Htr subtype, we utilized an RNA-seq dataset provided by the Allen Institute {Yao, 2023 #2828}, "
                 "incorporating the associated hierarchical clustering of cells at four nested levels. Spatial distribution data was obtained from "
                 "a MERFISH dataset by Harvard University {Zhang, 2023 #2887}. This approach revealed new patterns of Htrs "
-                "transcription with an unparalleled level of detail, and also set a new benchmark for examining their distribution "
-                "against the backdrop of existing literature, enriching our grasp of 5-HT nuanced contributions to brain function. "
-                "To facilitate broader exploration of the Htr landscape throughout the brain, "
-                "we have developed an online visualization tool. This platform enables the seamless exploration of both the RNA-seq and MERFISH dataset at different levels of "
+                "transcription and set a new benchmark for examining their distribution "
+                "against the backdrop of existing literature, deepening our understanding of the complex roles of 5-HT in brain function. "
+                "To facilitate broader custom exploration of the Htr landscape throughout the brain, "
+                "we have developed an online visualization tool that enables the seamless exploration of both the RNA-seq and MERFISH dataset at different levels of "
                 "granularity, providing a comprehensive view of the 5-HT receptor distribution. ")
 
 

@@ -5,7 +5,7 @@ discussion = ("In this work we described the main transcriptional features of ea
               f"We found that Htrs RNA is transcribed in around 2 every 3 cells and 6 Htrs were transcribed in >10% of cells, with Htr1f reaching a peak of {expression_total.max()}%. "
               f"Htrs patterns of transcription can be used to decode the identity of cells grouped by neurotransmitter, neighborhoods and classes at an above chanche level. "
               f"Surprisingly, it was common to detect multiple Htrs within a single cells. This points at the great complexity of the 5-HT "
-              f"system even at the a unicellular level."
+              f"system even at a cellular level. "
               "We can recapitulate our results regarding each Htr by summarizing the defining feature of each receptor: "
               "Htr1a is expressed in an important fraction of Sero neurons of the raphe and some HPF excitatory neurons; "
               "Htr1b is expressed in many inhibitory striatal neurons and Sero neurons; "
