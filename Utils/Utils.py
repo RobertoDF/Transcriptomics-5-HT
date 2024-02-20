@@ -84,7 +84,7 @@ def Naturize_text(legends_supplementary):
                 if (char.isupper()) & (v[n-1] == "(") & (v[n+1] == ")") & (char.isalpha() is True):
                     v_list[n] = char.lower()
                 elif (char.isupper()) & (v[n-1] != ".") & (v[n-2] != ".") & (char.isalpha() is True) &\
-                        (v[n-1].isalpha() is False) & (v[n+1].isalpha() is False)& (v[n+1]!="�"):
+                        (v[n-1].isalpha() is False) & (v[n+1].isalpha() is False)& (v[n+1]!="²"):
                     v_list[n] = char.lower()
                 elif (char.isupper()) & (v[n-1].isdigit() is True):
                     v_list[n] = char.lower()
