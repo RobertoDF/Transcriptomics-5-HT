@@ -3,7 +3,7 @@ from Utils.Results_variables import *
 
 abstract = ("Serotonin (5-HT) plays a pivotal role in regulating a wide range of brain functions, including mood, sleep, and cognition. "
             "This study presents a comprehensive transcriptomic analysis of 5-HT "
-            "receptors (Htrs) covering ~4 million cells across the whole adult mouse brain, utilizing single-cell "
+            "receptors (Htrs) covering ≈4 million cells across the whole adult mouse brain, utilizing single-cell "
             "RNA sequencing (scRNA-seq) data from the Allen Institute. We report on the differential expression"
             " patterns of all 14 known Htr subtypes, revealing a wide diversity in their prevalence and "
             f"distribution across cel classes. Notably, we found that "
@@ -13,7 +13,7 @@ abstract = ("Serotonin (5-HT) plays a pivotal role in regulating a wide range of
             "The transcription patterns of Htrs can accurately inform a random forest classifier to identify specific classes and types "
             "of neurotransmitter-releasing cells with surprising success. "
             "Leveraging a multiplexed error-robust fluorescence in situ hybridization "
-            "(MERFISH) dataset provided by Harvard University of ~7% of the totality of cells found in a mouse brain, "
+            "(MERFISH) dataset provided by Harvard University of ≈7% of the totality of cells found in a mouse brain, "
             "we analyzed "
             "the spatial distribution of each Htr confirming previous findings and uncovering novel patterns of transcription at an unprecedented level of detail. "
             "Our findings underscore the complexity of the 5-HT system "

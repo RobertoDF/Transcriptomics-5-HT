@@ -348,7 +348,7 @@ cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter, re
 
 sel = "cluster_group_name"#"class"#"cluster_group_name"#"neurotransmitter"
 
-cm_neighborood, shap_matrix_neighborood, accuracy_neighborood, report_neighborood = decoddddddd(joined_boolean_with_membership, sel);
+cm_neighborhood, shap_matrix_neighborhood, accuracy_neighborhood, report_neighborhood = decoddddddd(joined_boolean_with_membership, sel);
 
 sel = "class"#"class"#"cluster_group_name"#"neurotransmitter"
 
