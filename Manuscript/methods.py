@@ -10,7 +10,7 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
 
 
            "Online visualizer": "The online visualizer was built in Python using Matplotlib, Holoviews and Panel. It is deployed and accesible online on the Hugging Face portal "
-                                "https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics. "
+                                " . "
                                 "It is organized in 4 different tabs: 'Spatial MERFISH', 'Gene by class/subclass/supertype/cluster', "
                                 "'Overview genes by class' and 'Overview genes by brain structure'. The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, "
                                 "remaing tabs are associated with the RNA-seq dataset. Each tab is associated to different interactive controls and panels. "
