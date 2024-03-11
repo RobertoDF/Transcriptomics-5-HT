@@ -6,7 +6,7 @@ abstract = ("Serotonin (5-HT) plays a pivotal role in regulating a wide range of
             "receptors (Htrs) covering ≈4 million cells across the whole adult mouse brain, utilizing single-cell "
             "RNA sequencing (scRNA-seq) data from the Allen Institute. We report on the differential expression"
             " patterns of all 14 known Htr subtypes, revealing a wide diversity in their prevalence and "
-            f"distribution across cel classes. Notably, we found that "
+            f"distribution across cell classes. Notably, we found that "
             f"{round(((exp>threshold_expression).sum(axis=1).astype(bool).sum()/exp.shape[0])*100,2)}% "
             f"of cells transcribe RNA of at least one Htr and often "
             "Htrs were found to colocalize. "

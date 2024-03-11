@@ -104,3 +104,13 @@ def percentage_above_threshold(series):
 def percentage_above_threshold_MER(series):
     return (series > threshold_expression_MERFISH).sum() / len(series) * 100
 
+def optimize_df(df):
+    float_cols = df.select_dtypes(include='float64').columns
+    df[float_cols] = df[float_cols].astype('float16')
+
+    # Convert object columns to category if they have a limited number of unique values
+    obj_cols = df.select_dtypes(include='object').columns
+    for col in obj_cols:
+        if df[col].nunique() <100:  # Adjust this threshold as needed
+            df[col] = df[col].astype('category')
+    return df
