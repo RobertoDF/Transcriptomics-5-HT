@@ -1,7 +1,8 @@
 from Utils.Settings import threshold_expression_MERFISH, threshold_enriched_clusters
 
 
-methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2 jupyter notebooks located in the folder 'Figures': 'Figure_1.ipynb' and 'Figure_2.ipynb'. To adapt the code for the visualization of different genes "
+methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2 jupyter notebooks hosted on Github at https://github.com/RobertoDF/Transcriptomics-5-HT. 'Figure_1.ipynb' and 'Figure_2.ipynb' notebooks reproduce all figures contained in the paper. 
+                                            To adapt the code for the visualization of different genes "
                                           "is sufficient to change the 'family_name' and 'genes_families' variables in Utils.Settings.py file. Data is downloaded "
                                           "following the instructions provided by the Allen Institute (https://alleninstitute.github.io/abc_atlas_access/intro.html). "
                                           "Notebooks to download the RNA-seq and MERFISH datasets are contained in the 'Load_Data' folder. To explore the expression of different genes, "
@@ -9,7 +10,7 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                           "this can be achieved by modifying the cells underneath the headings 'Select genes RNA-seq' and 'Select genes MERFISH'. ",
 
 
-           "Online visualizer": "The online visualizer was built in Python using Matplotlib, Holoviews and Panel. It is deployed and accesible online on the Hugging Face portal "
+           "Online visualizer": "The online visualizer was built in Python using Matplotlib, Holoviews and Panel. It is deployed and accessible online on the Hugging Face portal "
                                 " . "
                                 "It is organized in 4 different tabs: 'Spatial MERFISH', 'Gene by class/subclass/supertype/cluster', "
                                 "'Overview genes by class' and 'Overview genes by brain structure'. The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, "
