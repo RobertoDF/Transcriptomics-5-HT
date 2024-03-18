@@ -26,7 +26,6 @@ cell.set_index('cell_label',inplace=True)
 matrices = cell.groupby(['dataset_label','feature_matrix_label'])[['library_label']].count()
 matrices.columns  = ['cell_count']
 
-
 rpath = metadata['example_genes_all_cells_expression']['files']['csv']['relative_path']
 file = os.path.join( download_base, rpath.replace('example_genes_all_cells_expression.csv', f'{family_name}_genes_all_cells_expression.csv'))
 exp = pd.read_csv(file)
@@ -145,10 +144,6 @@ mean_expression_by_class = round(joined.groupby("class")[selected_genes].apply(p
 sem_expression_by_class = round(joined.groupby("class")[selected_genes].apply(percentage_above_threshold).sem(), 2)
 
 
-coloc = pd.read_pickle(f"{output_folder_calculations}/total_colocalization_{family_name}.pkl")
-
-with open(f"{output_folder_calculations}/total_colocalization_{family_name}_by_neigh.pkl", "rb") as pkl_file:
-    coloc_by_neigh = pickle.load(pkl_file)
 
 _ = joined_boolean[selected_genes]
 at_least_2_receptors = {}
@@ -291,8 +286,6 @@ color_dict = data_merfish[['parcellation_division_color', 'parcellation_division
 color_dict.update(data_merfish[['parcellation_structure_color', 'parcellation_structure']].drop_duplicates().set_index(
     'parcellation_structure').to_dict()['parcellation_structure_color'])
 
-sel = "neurotransmitter"  # "cluster_group_name"#"neurotransmitter"
-
 
 def decoddddddd(joined_boolean, sel):
     df = joined_boolean[[sel] + list(selected_genes)]
@@ -343,6 +336,7 @@ def decoddddddd(joined_boolean, sel):
 
     return cm, shap_matrix, accuracy, report
 
+sel = "neurotransmitter"  # "cluster_group_name"#"neurotransmitter"
 
 cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter, report_neurotransmitter  = decoddddddd(joined_boolean, sel)
 
@@ -367,18 +361,6 @@ subset = joined_with_membership[joined_with_membership["cluster_group_name"] == 
 correlation_TH_EPI = subset[exp.columns].corr()
 correlation_TH_EPI = round(correlation_TH_EPI[correlation_TH_EPI<1], 3)
 
-
-out = {}
-for i, neigh in enumerate(['Pallium-Glut',
-     'Subpallium-GABA',
-     'MB-HB-CB-GABA',
-     'MB-HB-Glut-Sero-Dopa',
-     'HY-EA-Glut-GABA',
-     'TH-EPI-Glut']):
-            coloc = coloc_by_neigh[neigh]
-            out[neigh] = coloc[coloc["Colocalized (%)"]<100].groupby("Gene2")["Colocalized (%)"].mean()
-
-coloc_matrix = round(pd.DataFrame.from_dict(out), 2)
 
 gene="Htr1a"
 clu_by_expr = joined.groupby("cluster")[gene].apply(percentage_above_threshold).sort_values(ascending=False)

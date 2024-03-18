@@ -1,0 +1,20 @@
+gene_identifier,gene_symbol,name,mapped_ncbi_identifier
+ENSMUSG00000022041,Chrna2,"cholinergic receptor, nicotinic, alpha polypeptide 2 (neuronal)",NCBIGene:110902
+ENSMUSG00000027577,Chrna4,"cholinergic receptor, nicotinic, alpha polypeptide 4",NCBIGene:11438
+ENSMUSG00000032773,Chrm1,"cholinergic receptor, muscarinic 1, CNS",NCBIGene:12669
+ENSMUSG00000046159,Chrm3,"cholinergic receptor, muscarinic 3, cardiac",NCBIGene:12671
+ENSMUSG00000032303,Chrna3,"cholinergic receptor, nicotinic, alpha polypeptide 3",NCBIGene:110834
+ENSMUSG00000035594,Chrna5,"cholinergic receptor, nicotinic, alpha polypeptide 5",NCBIGene:110835
+ENSMUSG00000045613,Chrm2,"cholinergic receptor, muscarinic 2, cardiac",NCBIGene:243764
+ENSMUSG00000031492,Chrnb3,"cholinergic receptor, nicotinic, beta polypeptide 3",NCBIGene:108043
+ENSMUSG00000031491,Chrna6,"cholinergic receptor, nicotinic, alpha polypeptide 6",NCBIGene:11440
+ENSMUSG00000030525,Chrna7,"cholinergic receptor, nicotinic, alpha polypeptide 7",NCBIGene:11441
+ENSMUSG00000024798,Htr7,5-hydroxytryptamine (serotonin) receptor 7,NCBIGene:15566
+ENSMUSG00000050783,Htr1f,5-hydroxytryptamine (serotonin) receptor 1F,NCBIGene:15557
+ENSMUSG00000070687,Htr1d,5-hydroxytryptamine (serotonin) receptor 1D,NCBIGene:15552
+ENSMUSG00000026322,Htr4,5 hydroxytryptamine (serotonin) receptor 4,NCBIGene:15562
+ENSMUSG00000049511,Htr1b,5-hydroxytryptamine (serotonin) receptor 1B,NCBIGene:15551
+ENSMUSG00000034997,Htr2a,5-hydroxytryptamine (serotonin) receptor 2A,NCBIGene:15558
+ENSMUSG00000021721,Htr1a,5-hydroxytryptamine (serotonin) receptor 1A,NCBIGene:15550
+ENSMUSG00000041380,Htr2c,5-hydroxytryptamine (serotonin) receptor 2C,NCBIGene:15560
+ENSMUSG00000032269,Htr3a,5-hydroxytryptamine (serotonin) receptor 3A,NCBIGene:15561

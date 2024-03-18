@@ -1,8 +1,8 @@
 from Utils.Settings import threshold_expression_MERFISH, threshold_enriched_clusters
 
 
-methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2 jupyter notebooks hosted on Github at https://github.com/RobertoDF/Transcriptomics-5-HT. 'Figure_1.ipynb' and 'Figure_2.ipynb' notebooks reproduce all figures contained in the paper. 
-                                            To adapt the code for the visualization of different genes "
+methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2 jupyter notebooks hosted on Github at https://github.com/RobertoDF/Transcriptomics-5-HT. 'Figure_1.ipynb' and 'Figure_2.ipynb' notebooks reproduce all figures contained in the paper. "
+                                            "To adapt the code for the visualization of different genes "
                                           "is sufficient to change the 'family_name' and 'genes_families' variables in Utils.Settings.py file. Data is downloaded "
                                           "following the instructions provided by the Allen Institute (https://alleninstitute.github.io/abc_atlas_access/intro.html). "
                                           "Notebooks to download the RNA-seq and MERFISH datasets are contained in the 'Load_Data' folder. To explore the expression of different genes, "

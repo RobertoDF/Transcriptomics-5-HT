@@ -1,5 +1,7 @@
 # 🧬Transcriptomic Mapping of the 5-HT Receptor Landscape🧬
 
+The complete manuscript (figures + text) can be reproduced using Python code present in this repository. Each number present in the text is an f-String that can be traced back to a data structure (see End2EndPaper).
+
 ## 🟧[Online visualizer](https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics) 🧠
 
 The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, remaing tabs are associated with the RNA-seq dataset. Each tab is associated to different interactive controls and panels. 
