@@ -31,9 +31,9 @@ acknowledgements = "This study was supported by the German Research Foundation D
                 "We thank Willy Schiegel and Tiziano Zito for technical help with cluster computing. We thank members of Schmitz lab for discussion. " \
                 "The authors declare that they have no competing interests. "
 
-contributions = "Conceptualization, data curation, formal analysis, investigation, visualization: RDF. Writing - original draft: RDF. " \
+contributions = "Conceptualization, data curation, formal analysis, investigation, visualization, supervision: RDF. Writing - original draft: RDF. " \
                 "Writing - review & editing: RDF, DS. " \
-                "Funding acquisition: DS."
+                "Funding acquisition & resources: DS."
 
 data_availability = "All the code used to process the dataset is available at https://github.com/RobertoDF/Transcriptomics-5-HT. "\
                     "All figures and text can be reproduced using code present in this repository. Access to the original datasets is provided by the Allen Institute at "\
