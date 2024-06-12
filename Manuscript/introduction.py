@@ -11,7 +11,7 @@ introduction = ("5-HT stands as a pivotal neuromodulator within the brain, orche
                 "in shedding light on this question {Vilaró, 2020 #2939; Hawrylycz, 2012 #2940}. These methodologies have provided foundational insights into the brain-wide effects of 5-HT, "
                 "contributing significantly to our current understanding {Salvan, 2023 #2941}. However, the introduction of single-cell RNA-seq and MERFISH has revolutionized "
                 "our ability to dissect gene transcription. Unlike their predecessors, these techniques offer an unparalleled resolution, scalability and depth of profiling, "
-                "enabling detailed mapping of each Htr's trancription patterns. Such precision enhances our understanding of 5-HT´s "
+                "enabling detailed mapping of each Htr's transcription patterns. Such precision enhances our understanding of 5-HT´s "
                 "functions, setting the stage for more accurate and nuanced insights into its impact on neural circuits. "
                 "To elucidate the complexities of the distribution of each Htr subtype, we utilized an RNA-seq dataset provided by the Allen Institute {Yao, 2023 #2828}, "
                 "incorporating the associated hierarchical clustering of cells at four nested levels. Spatial distribution data was obtained from "

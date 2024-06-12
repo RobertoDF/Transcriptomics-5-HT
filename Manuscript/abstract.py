@@ -13,7 +13,7 @@ abstract = ("Serotonin (5-HT) plays a pivotal role in regulating a wide range of
             "The transcription patterns of Htrs can accurately inform a random forest classifier to identify specific classes and types "
             "of neurotransmitter-releasing cells with surprising success. "
             "Leveraging a multiplexed error-robust fluorescence in situ hybridization "
-            "(MERFISH) dataset provided by Harvard University of ≈7% of the totality of cells found in a mouse brain, "
+            "(MERFISH) dataset provided by Harvard University of ≈10 million cells found in a mouse brain, "
             "we analyzed "
             "the spatial distribution of each Htr confirming previous findings and uncovering novel patterns of transcription at an unprecedented level of detail. "
             "Our findings underscore the complexity of the 5-HT system "

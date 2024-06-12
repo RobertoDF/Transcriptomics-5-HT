@@ -261,7 +261,7 @@ results = {"Htrs transcription overview":
 
            "Htr4, Htr6 and Htr7": "These receptors are all connected to Gs {McCorvy, 2015 #2889}, leading to increasing cellular levels of cAMP. "
                                   "Htr4, similarly to Htr2C, showed highest prevalence (>40%) in the MB-HB-Glut-Sero-Dopa and Hy-EA-Glut-Gaba groups (Figure 7A). "
-                                  "It colocalized the most with Htr2c and Htr1f (Figure 8B). "
+                                  "It colocalized the most with Htr2c and Htr1f (Figure 7B). "
                                   "Transcription across classes was broadly distributed, with many subcortical classes showing a prevalence >40% (Figure 7C). "
                                   "Highest prevalence was found in "
                                   "the 17 MH-LH Glut class, specifically in the Chol releasing neurons belonging to this class located in TH. "
@@ -277,7 +277,7 @@ results = {"Htrs transcription overview":
                                   "We do not have MERFISH information about the rarely transcribed Htr6 and no enriched cluster was "
                                   f"present in the RNA-seq dataset. The 09 NU-LGE GABA class exhibited the highest prevalence with "
                                   f"{round(joined.groupby('class')['Htr6'].apply(percentage_above_threshold)['09 CNU-LGE GABA'], 2)}, still, the absolute majority of neurons "
-                                  f"transcribing the RNA of this gene were excitatory cortical neurons (Figure S11C). \n"
+                                  f"transcribing the RNA of this gene were excitatory cortical neurons (Figure S9C). \n"
                                   
                                   "Conversely, Htr7 was transcribed in >10% of the totality of cells. "
                                   "It reached ≈60% in the TH-EPI Glut group, and considerable amounts (≈40%) in MB, HB and HY groups (Figure 8A). "
