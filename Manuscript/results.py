@@ -87,7 +87,7 @@ results = {"Htrs transcription overview":
                f"from the analysis of the entire dataset. Of note, TH-EPI-Glut showed the "
                f"highest absolute correlation across all neighborhoods with r={correlation_TH_EPI.max().max()} "
                f"between Htr5b-Htr4 and a unique negative correlation between Htr4-Htr7. "
-               "To explore the underlying causes of the correlations we analyzed colocalization between Htrs. "
+               "To explore the underlying causes of the correlations we analyzed colocalization (co-transcription) between Htrs. "
                f"Across the entire dataset we observed that the most transcribed genes, Htr1f and Htr2c, "
                f"were regularly transcribed whenever the RNA of any other Htr was detected (Figure 1F). "
                f"This was a driving factor for correlation. Looking more in detail across neighborhoods, also here we noticed important differences, mainly explainable "
@@ -116,7 +116,9 @@ results = {"Htrs transcription overview":
                "to analyze in detail their spatial distribution. ",
 
            "Htr1 & Htr5": u"Receptors belonging to these two families have an inhibitory effect on the host cell, they are coupled to G\u1D62 and cause a downstream decrease of cAMP "
-                          "and activation of GIRK channels {Sharp, 2020 #2888; McCorvy, 2015 #2889}. "
+                          "and activation of GIRK channels {Sharp, 2020 #2888; McCorvy, 2015 #2889}. \n"
+                          "Htr1a agonists, such as buspirone, are used as anxiolytics. Htr1b and Htr1d agonists, like triptans, "
+                          "are effective in treating migraines by causing vasoconstriction of cranial blood vessels."
                           "Htr1a RNA have a stable prevalence of ≈10% across neighborhoods in the RNA-seq dataset, with virtual absence in the TH-EPI-Glut group (Figure 2A). "
                           "Htr1a co-localized most frequently with Htr1f, Htr2c and Htr2a (Figure 2B) and only in a minority of cases was transcribed alone (<10%). "
                           "Transcription across classes was highly correlated between the RNA-seq and MERFISH datasets (Figure 2A) "
@@ -145,7 +147,7 @@ results = {"Htrs transcription overview":
                           "and MS {Kia, 1996 #2926}. "
                           "Levels of of transcription were stable across the anterior-posterior axis like in most other Htrs (Figure 2E-F). \n"
                           
-                          "Htr1b exhibited a more diverse pattern of transcription across neighborhoods (Figure 3A) ranging from 10 to 30%. "
+                          "Htr1b is involved in social memory persistance in mouse {Wu, 2021 #2945}. Htr1b exhibited a more diverse pattern of transcription across neighborhoods (Figure 3A) ranging from 10 to 30%. "
                           "Highest prevalence was observed in the MB-HB-Glut-Sero-Dopa group, i.e., "
                           "glutamatergic, serotonergic and dopaminergic neurons located in midbrain and hindbrain. "
                           "Colocalization showed a similar pattern compared to Htr1a (Figure 3B), only a minority of cells transcribed Htr1b alone (<10%). "
@@ -217,7 +219,10 @@ results = {"Htrs transcription overview":
                           "Some transcription was also evident in the posterior part of the brain, "
                           "specifically in the inferior olivary complex (IO), driven by a single supertype, 253 IO Fgl2 Glut, and some structures populated by Sero neurons. \n",
 
-           "Htr2": "The Htr2 family is mainly linked to Gq/11 and causes depolarization by increasing intracellular Ca2+. Htr2a, instrumental in mediating the effects of psychedelics {Nichols, 2016 #854},"
+           "Htr2": "The Htr2 family is mainly linked to Gq/11 and causes depolarization by increasing intracellular Ca2+. "
+                   "HtraA antagonists, such as atypical antipsychotics (e.g., clozapine and risperidone), are used in treating schizophrenia and other psychiatric disorders. Htr2c"
+                   " antagonists are being explored for their potential in treating obesity and metabolic disorders {He, 2022 #2942; Yao, 2021 #2943}. Htr2a, "
+                   "instrumental in mediating the effects of psychedelics {Nichols, 2016 #854},"
                    " is found across the brain with highest prevalence in telencephalic neighborhoods, Pallium-Glut and Subpallium-GABA (Figure 5A). "
                    "Colocalization was highest with Htr1f and Htr2c (Figure 5B). Highest transcription (≈40%) was found in 01 IT-ET Glut, 07 CTX-MGE GABA "
                    "and 16 HY-MM Glut classes (Figure 5C). Interestingly somatotatin (Sst) neuron belonging to 07 CTX-MGE GABA, "
@@ -259,7 +264,8 @@ results = {"Htrs transcription overview":
                    f"the anterior olfactory nucleus (AON), piriform area (PIR and PAA) and amygdala (LA and BLA). "
                    f"Htr2c RNA was found across a variety of structures also in the MB (non in Sero neurons), pons (P), medulla (MY) and cerebellum (CB).  ",
 
-           "Htr4, Htr6 and Htr7": "These receptors are all connected to Gs {McCorvy, 2015 #2889}, leading to increasing cellular levels of cAMP. "
+           "Htr4, Htr6 and Htr7": "These receptors are all connected to Gs {McCorvy, 2015 #2889}, leading to increasing cellular levels of cAMP. Htr4 modulation in HPF has been found to "
+                                  "bidirectionally influence memory formation in  mice {Teixeira, 2018 #924}. "
                                   "Htr4, similarly to Htr2C, showed highest prevalence (>40%) in the MB-HB-Glut-Sero-Dopa and Hy-EA-Glut-Gaba groups (Figure 7A). "
                                   "It colocalized the most with Htr2c and Htr1f (Figure 7B). "
                                   "Transcription across classes was broadly distributed, with many subcortical classes showing a prevalence >40% (Figure 7C). "
@@ -291,6 +297,7 @@ results = {"Htrs transcription overview":
                                   "At a structure level, the parafascicular (PF)  and paraventricular nucleus (PVT) of TH showed the highest prevalence (>30%). ",
 
            "Htr3": "The Htr3 family is the only ionotropic Htr and it causes direct excitation by allowing the influx of cations. "
+                   "Htr3 antagonists, such as ondansetron, are effective antiemetics used to prevent nausea and vomiting."
                    "The Htr3a subunit is required for the formation of a functional channel {Maricq, 1991 #2918} and can form functional homopentameric receptors "
                    "{Walstab, 2010 #2919}. "
                    "Heteromeric receptors containing Htr3b have an increased channel conductance and different selectivity {Davies, 1999 #2920}. "

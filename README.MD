@@ -4,8 +4,10 @@ The complete manuscript (figures + text) can be reproduced using Python code pre
 
 ## 🟧[Online visualizer](https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics) 🧠
 
-*The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, remaining tabs are associated with the RNA-seq dataset. Each tab is associated to different interactive controls and panels. 
-More details in the associated manuscript.*
+*The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, remaining tabs are associated with the RNA-seq dataset. 
+Data source for each dashboard is annotated in the title between parentheses*
+
+**All colorbars represent prevalence (% of cells transcribing the selected gene)**
 
 ### 'Spatial MERFISH': 
 5 interactive controls enable the selections of different datasets from {Zhang, 2023 #2887}, brain section, gene, class and subclass. The datasets available are 2 coronal (Zhuang-ABCA-1/2) and 2 sagittals (Zhuang-ABCA-3/4). The brain section selector enables the visualization of different slices. The gene selector enables the selection of a specific gene. Class and subclass selector restrict the visualization to selected groups. 6 panels are provided. From top to bottom: lineplot representing the proportion of cells selected out the cells available across the spatial axis associated to each dataset, lineplot representing the amount of transcription across space of the selected gene, lineplot representing the percentage of cells across space in which RNA of the selected gene was detected (threshold set at 0.3), barplot representing the percentage of Htr positive cells in the selected slice grouped by brain structure (number in each bar is the absolute number of cells) and two panels representing the slice selected with the gene transcription on the left and atlas metadata on the right. 
