@@ -6,11 +6,11 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                             "To adapt the code for the visualization of different genes it "
                                           "is sufficient to change the 'family_name' and 'genes_families' variables in Utils.Settings.py file. Data is downloaded "
                                           "following the instructions provided by the Allen Institute (https://alleninstitute.github.io/abc_atlas_access/intro.html). "
-                                          "Notebooks to download the RNA-seq and MERFISH datasets are contained in the 'Load_Data' folder. To explore the expression of different genes, "
+                                          "Notebooks to download the scRNA-seq and MERFISH datasets are contained in the 'Load_Data' folder. To explore the expression of different genes, "
                                           "it is necessary to download the associated expression matrices by changing the selected genes in the 'Download_RNAseq_data.ipynb' notebook, "
-                                          "this can be achieved by modifying the cells underneath the headings 'Select genes RNA-seq' and 'Select genes MERFISH'. ",
+                                          "this can be achieved by modifying the cells underneath the headings 'Select genes scRNA-seq' and 'Select genes MERFISH'. ",
 
-            "Data preparation":             "We loaded the metadata and the precomputed expression matrices for the RNA-seq dataset relative to all Htr genes "
+            "Data preparation":             "We loaded the metadata and the precomputed expression matrices for the scRNA-seq dataset relative to all Htr genes "
                                                       "(see 'Load_data/Download_RNAseq_data.ipynb'). We also loaded the metadata relative to the "
                                                       "'cluster_group_name' residing in originally in a different .csv file ('Find membership df' in 'Figure_1.ipynb'). "
                                                       "This information is referred to as 'membership'. "
@@ -26,7 +26,7 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                                              "the registration to the Allen Mouse Brain Common Coordinate Framework (CCF) and , subsequently, "
                                                              "we assigned parcellations labels ('CCF registration and parcellation annotation' in 'Figure_2.ipynb'). ",
 
-            "Overview figure visualization": "This figure relies uniquely on the RNA-seq dataset. "
+            "Overview figure visualization": "This figure relies uniquely on the scRNA-seq dataset. "
                                                       "In panel A we use a heatmap to visualize both the amount of transcription per cell and the number of cells transcribing each Htr "
                                                       "contained in the dataset. In panel B we used the precomputed UMAP coordinates and plot on the color axis information about the "
                                                       "most transcribed gene per selected family. \n"
@@ -83,13 +83,13 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                                       "This column identified the primary serotonin receptor family for each entry by determining the "
                                                       "family with the highest aggregated expression. ",
 
-            "Receptor figure preparation and visualization":  "This figure relies on both the RNA-seq and MERFISH datasets. "
+            "Receptor figure preparation and visualization":  "This figure relies on both the scRNA-seq and MERFISH datasets. "
                                                               "In panel A we plot both the prevalence and the average amount of transcription of the selected gene in the two datasets. "
                                                              "We excluded from the analysis the 'NN-IMN-GC' neighborhood because of consistently low transcription across all Htr genes. For the visualization "
                                                               "of gene expression patterns across different 'neighborhoods', we utilized the Seaborn library in Python to create point plots. "
                                                               "Specifically, we employed the 'sns.pointplot' function to illustrate the expression levels of a given gene across various groups. The 'sns.violinplot' "
                                                               "function was used to plot violin plots of amount of transcription per group. \n"
-                                                              "In panel B we used the same co-localization data used in Figure 1 panel F (RNA-seq dataset), This barplot is a 'sliced' version of that panel focusing on one receptor at the time. "
+                                                              "In panel B we used the same co-localization data used in Figure 1 panel F (scRNA-seq dataset), This barplot is a 'sliced' version of that panel focusing on one receptor at the time. "
                                                               "To visualize the number of colocalized genes (barplot on the right), we utilized a boolean DataFrame ('joined_boolean') to"
                                                               " filter for selected genes and focus on the expression status of a particular gene. "
                                                               "We then calculated the sum of true values (indicating gene transcription) across each row "
@@ -102,12 +102,12 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                                               "selected for visualization. Using Seaborn's barplot function, we created a bar plot to display the distribution of these classes. "
                                                               "The y-axis represented the count of occurrences, while the x-axis denoted the different classes. \n"
                                                               "In panel D we plotted the prevalence of the selected gene in brain regions at two different hyerarchical levels, 'division' and 'structure'. "
-                                                              "Here we take advantage of the high-confidence label integration between the 'RNA-seq' and 'MERFISH dataset' {Zhang, 2023 #2887}. "
+                                                              "Here we take advantage of the high-confidence label integration between the 'scRNA-seq' and 'MERFISH dataset' {Zhang, 2023 #2887}. "
                                                               "Each cell of the 'MERFISH' "
-                                                              "dataset is assigned a cell-type label ('class', 'subclass', 'supertype' and 'cluster') from the clustering of the 'RNA-seq' {Yao, 2023 #2886}."
+                                                              "dataset is assigned a cell-type label ('class', 'subclass', 'supertype' and 'cluster') from the clustering of the 'scRNA-seq' {Yao, 2023 #2886}."
                                                               "To analyze the expression of specific genes across different brain regions and neuronal clusters, we utilized a multi-step data processing approach. "
                                                               "First, we calculated the percentage of cells within each cluster expressing the target gene above a defined threshold, grouping the data by cluster. "
-                                                              "This allowed us to identify clusters with high gene expression levels in the RNA-seq. Next, we focused on clusters with significant gene expression, "
+                                                              "This allowed us to identify clusters with high gene expression levels in the scRNA-seq. Next, we focused on clusters with significant gene expression, "
                                                               "filtering the 'MERFISH' dataset "
                                                               "to include only these enriched clusters. We then computed the prevalence of gene expression within these clusters across different parcellation divisions and "
                                                               "structures. This was done by normalizing the number of cells expressing the gene in each division or structure by the total number of cells in that division or "
@@ -152,7 +152,7 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                 "It is organized in 4 different tabs: 'Spatial MERFISH', 'Gene by class/subclass/supertype/cluster', "
                                 "'Overview genes by class' and 'Overview genes by brain structure'. "
                                 "The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, "
-                                "remaining tabs are associated with the RNA-seq dataset. Each tab is associated to different interactive controls and panels. "
+                                "remaining tabs are associated with the scRNA-seq dataset. Each tab is associated to different interactive controls and panels. "
                                 "'Spatial MERFISH': 5 interactive controls enable the selections of different datasets from {Zhang, 2023 #2887}, brain section, gene, class and subclass. "
                                 "The datasets available are 2 coronal (Zhuang-ABCA-1/2) and 2 sagittals (Zhuang-ABCA-3/4). The brain section selector enables the visualization of different slices. "
                                 "The gene selector enables the selection of a specific gene. Class and subclass selector restrict the visualization to selected groups. 6 panels are provided. "
@@ -182,9 +182,9 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                 f"of the current selection. Gene prevalence is limited to cluster enriched in the according gene (prevalence within cluster of the gene >{threshold_enriched_clusters}%). "
                                 f"The y axis is populated by the brain structures belonging to the currently selected brain division. For each division we can "
                                 "refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. \n"
-                                "First we identify enriched clusters in the RNA-seq dataset then we look at the proportion of cells belonging to enriched clusters over the total number of cells per region. "
+                                "First we identify enriched clusters in the scRNA-seq dataset then we look at the proportion of cells belonging to enriched clusters over the total number of cells per region. "
                                 "This creates a problem in the cases where a 5-HT receptor was not deemed important by the clustering algo, "
                                 "in these cases there might be a really small amount of enriched clusters and most cells will be ignored. "
-                                "To solve this we create a data source selector to enable the possibility to bypass RNA-seq and look at MERRFISH data only. In this case we look directly at the ratio of cells expressing transcribing each gene over the total number of cells per region. "
+                                "To solve this we create a data source selector to enable the possibility to bypass scRNA-seq and look at MERRFISH data only. In this case we look directly at the ratio of cells expressing transcribing each gene over the total number of cells per region. "
 
            }
