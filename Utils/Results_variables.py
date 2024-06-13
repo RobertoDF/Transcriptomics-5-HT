@@ -287,55 +287,6 @@ color_dict.update(data_merfish[['parcellation_structure_color', 'parcellation_st
     'parcellation_structure').to_dict()['parcellation_structure_color'])
 
 
-def decoddddddd(joined_boolean, sel):
-    df = joined_boolean[[sel] + list(selected_genes)]
-
-    df.set_index(sel, inplace=True)
-
-    # Assuming 'df' is your DataFrame
-    X = df  # Features (Htr expression levels)
-    y = df.index  # Target (neurotransmitter type)
-
-    # Split the data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05, stratify=y)
-
-    # Initialize the Random Forest classifier
-    # You can adjust 'n_estimators' and 'max_depth' based on your dataset and computational resources
-    rf_classifier = RandomForestClassifier(n_estimators=10, max_depth=10, n_jobs=30, class_weight='balanced')
-    # rf_classifier = HistGradientBoostingClassifier( class_weight='balanced')
-
-    # Train the model
-    rf_classifier.fit(X_train, y_train)
-
-    # Make predictions
-    y_pred = rf_classifier.predict(X_test)
-
-    # Evaluate the model
-    accuracy = accuracy_score(y_test, y_pred) * 100
-    print("Accuracy:", accuracy)
-    report = classification_report(y_test, y_pred, output_dict=True)
-    print("\nClassification Report:\n", classification_report(y_test, y_pred))
-
-    cm = confusion_matrix(y_test, y_pred, normalize="true")
-
-    cm = pd.DataFrame(cm, columns=y_test.astype("category").categories,
-                      index=y_test.astype("category").categories) * 100
-
-    X_sample = X_test.sample(n=10000, weights=y_test.map(10000 / y_test.value_counts()), random_state=4)
-
-    # Calculate SHAP values
-    explainer = shap.TreeExplainer(rf_classifier, n_jobs=40)
-    shap_values = explainer.shap_values(X_sample)
-
-    out = []
-    for i in range(len(shap_values)):
-        out.append(pd.Series(np.abs(shap_values[i]).mean(0), name=sorted(joined_boolean[sel].unique())[i],
-                             index=X_test.columns))
-
-    shap_matrix = pd.concat(out, axis=1).T
-
-    return cm, shap_matrix, accuracy, report
-
 sel = "neurotransmitter"  # "cluster_group_name"#"neurotransmitter"
 
 cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter, report_neurotransmitter  = decoddddddd(joined_boolean, sel)

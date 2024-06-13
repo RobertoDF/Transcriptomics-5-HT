@@ -8,6 +8,12 @@ import seaborn as sns
 from allensdk.core.reference_space_cache import ReferenceSpaceCache
 from Utils.Settings import download_base, genes_families, class_to_broad_division, output_folder_calculations, manifest, \
     threshold_expression, threshold_expression_MERFISH
+from sklearn.model_selection import cross_val_score, StratifiedKFold,  cross_val_predict
+from sklearn.metrics import make_scorer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import  balanced_accuracy_score, classification_report
+import shap
+from sklearn.metrics import confusion_matrix
 
 # cmaps
 
@@ -114,3 +120,54 @@ def optimize_df(df):
         if df[col].nunique() <100:  # Adjust this threshold as needed
             df[col] = df[col].astype('category')
     return df
+
+
+def decoddddddd(joined_boolean, sel, selected_genes, n_splits):
+
+    df = joined_boolean[[sel] + list(selected_genes)]
+
+    df.set_index(sel, inplace=True)
+
+    # Assuming 'df' is your DataFrame
+    X = df  # Features (Htr expression levels)
+    y = df.index  # Target (neurotransmitter type)
+
+    # Initialize the Random Forest classifier
+    # You can adjust 'n_estimators' and 'max_depth' based on your dataset and computational resources
+    model = RandomForestClassifier(n_estimators=200, max_depth=10, class_weight='balanced', n_jobs=20)
+
+    skf = StratifiedKFold(n_splits=n_splits)
+
+    scorer = make_scorer(balanced_accuracy_score)
+    scores = cross_val_score(model, X, y, cv=skf, scoring=scorer, n_jobs=n_splits)
+
+    accuracy = np.mean(scores)
+
+    print(scores)
+    print("Accuracy:", accuracy)
+
+    y_pred = cross_val_predict(model, X, y, cv=n_splits, n_jobs=n_splits)
+
+    report = classification_report(y, y_pred, output_dict=True)
+    print("\nClassification Report:\n", classification_report(y, y_pred))
+
+    cm = confusion_matrix(y, y_pred, normalize="true")
+
+    cm = pd.DataFrame(cm, columns=y.astype("category").categories,
+                      index=y.astype("category").categories) * 100
+
+    X_sample = X.sample(n=10000, weights=y.map(10000 / y.value_counts()), random_state=4)
+
+    model.fit(X, y)
+    # Calculate SHAP values
+    explainer = shap.TreeExplainer(model, n_jobs=40)
+    shap_values = explainer.shap_values(X_sample)
+
+    out = []
+    for i in range(len(shap_values)):
+        out.append(pd.Series(np.abs(shap_values[i]).mean(0), name=sorted(joined_boolean[sel].unique())[i],
+                             index=X.columns))
+
+    shap_matrix = pd.concat(out, axis=1).T
+
+    return cm, shap_matrix, accuracy, report

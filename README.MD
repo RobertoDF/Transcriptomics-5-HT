@@ -22,13 +22,17 @@ The plot can be sorted by the group´s alphabetical name or gene expression. Gen
 
 ### 'Overview genes by brain structure': 
 4 interactive controls enable the selections of data source, division, neurotransmitter and sorting. 
-The division and neurotransmitter selectors enable the selection of a specific brain division and neurotransmitter, respectively. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. With Data Source="Default" gene prevalence is limited to cluster enriched in the according gene (prevalence within cluster of the gene >70%).
-The y axis is populated by the brain structures belonging to the currently selected brain division. For each division we can refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. 
+The division and neurotransmitter selectors enable the selection of a specific brain division and neurotransmitter, 
+respectively. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. 
+With Data Source="Default" gene prevalence is limited to clusters enriched in the according gene (prevalence within cluster of the gene >70%).
+The y axis is populated by the brain structures belonging to the currently selected brain division. For each division 
+we can refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. 
 
 First we identify enriched clusters in the RNA-seq dataset then we look at the proportion of cells belonging to enriched clusters over the total number of cells per region. 
 This creates a problem in the cases where a 5-HT receptor was not deemed important by the clustering algo, 
-in these cases there might be a really small amount of enriched clusters and most cells will be ignored. 
-To solve this we create a data source selector ("MERFISH") to enable the possibility to bypass the RNA-seq clustering and look at MERRFISH data only. In this case we look directly at the ratio of cells transcribing each gene over the total number of cells per region. 
+in these cases there might be a small amount of enriched clusters and most cells will be simply ignored (if 100 positive cells all belong to one cluster they will make it "enriched", 
+if, on the other hand, they are split in multiple clusters tehy will be ignored). 
+To solve this we create a data source selector ("MERFISH") to enable the possibility to bypass the RNA-seq clustering and look at MERFISH data only. In this case we look directly at the ratio of cells transcribing each gene over the total number of cells per region. 
 
 ## ⬛️Description
 
