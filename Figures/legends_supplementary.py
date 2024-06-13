@@ -74,6 +74,8 @@ legends_supplementary =  {
                                               f"(C) Prevalence of Htr3b RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On te right, absolute number of cells expressing Htr3b RNA by class ranked in descending order (top ten). ",
 "Table 1. Neighborhoods descriptions": f"Description of cells belonging to each neighborhood group. ",
+"Table 2. Region acronyms": f"Allen Mouse Brain Common Coordinate Framework (CCF) acronyms. ",
+"Table 3. Htrs defining features": f"Concise table listing the defining feature of each Htr trascription pattern. ",
     
     
 }

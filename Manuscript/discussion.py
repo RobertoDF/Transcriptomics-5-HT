@@ -1,7 +1,7 @@
 from Utils.Results_variables import *
 
 discussion = ("In this work we described the main transcriptional features of each Htr across the entire brain, "
-              "leveraging two datasets provided by {Yao, 2023 #2828} and {Zhang, 2023 #2887}. "
+              "leveraging two datasets provided by {Yao, 2023 #2886} and {Zhang, 2023 #2887}. "
               f"We found that Htrs RNA is transcribed in around 2 every 3 cells and 6 Htrs were transcribed in >10% of cells, with Htr1f reaching a peak of {expression_total.max()}%. "
               f"Htrs patterns of transcription can be used to decode the identity of cells grouped by neurotransmitter, neighborhoods and classes at an above chance level. "
               f"Surprisingly, it was common to detect multiple Htrs within a single cell. This points at the great complexity of the 5-HT "

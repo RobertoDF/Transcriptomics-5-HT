@@ -128,6 +128,8 @@ neuron_cluster_groups_order = ['Pallium-Glut', 'Subpallium-GABA', 'MB-HB-CB-GABA
 
 ## ANALYSIS PARAMETERS
 
+#splits of the stratified cross-validation
+n_splits = 5
 
 # Nature style figure letters
 
