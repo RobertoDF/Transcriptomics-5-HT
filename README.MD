@@ -1,6 +1,6 @@
 # 🧬Transcriptomic Mapping of the 5-HT Receptor Landscape🧬
 
-The complete manuscript (figures + text) can be reproduced using Python code present in this repository. Each number present in the text is an f-String that can be traced back to a data structure (see End2EndPaper).
+The complete manuscript (figures + text) can be reproduced using Python code present in this repository. Each number present in the text is an f-String that can be traced back to a data structure (see [End2EndPaper](https://github.com/RobertoDF/End2EndPaper)).
 
 ## 🟧[Online visualizer](https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics) 🧠
 
