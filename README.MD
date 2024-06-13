@@ -19,13 +19,14 @@ The plot can be grouped at different levels of detail: classes, subclasses, supe
 The plot can be sorted by the group´s alphabetical name or gene expression. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. Y axis is populated by the name of the groups selected by the "Group by" selector. X axis shows each Htrs. 
 
 ### 'Overview genes by brain structure': 
-3 interactive controls enable the selections of which data source to use, division and neurotransmitter. The division and neurotransmitter selectors enable the selection of a specific brain division and neurotransmitter, respectively. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. Gene prevalence is limited to cluster enriched in the according gene (prevalence within cluster of the gene >70%). The y axis is populated by the brain structures belonging to the currently selected brain division. For each division we can refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. 
+4 interactive controls enable the selections of data source, division, neurotransmitter and sorting. 
+The division and neurotransmitter selectors enable the selection of a specific brain division and neurotransmitter, respectively. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. With Data Source="Default" gene prevalence is limited to cluster enriched in the according gene (prevalence within cluster of the gene >70%).
+The y axis is populated by the brain structures belonging to the currently selected brain division. For each division we can refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. 
 
 First we identify enriched clusters in the RNA-seq dataset then we look at the proportion of cells belonging to enriched clusters over the total number of cells per region. 
 This creates a problem in the cases where a 5-HT receptor was not deemed important by the clustering algo, 
 in these cases there might be a really small amount of enriched clusters and most cells will be ignored. 
-To solve this we create a data source selector to enable the possibility to bypass RNA-seq and look at MERRFISH data only. In this case we look directly at the ratio of cells expressing transcribing each gene over the total number of cells per region. 
-
+To solve this we create a data source selector ("MERFISH") to enable the possibility to bypass the RNA-seq clustering and look at MERRFISH data only. In this case we look directly at the ratio of cells transcribing each gene over the total number of cells per region. 
 
 ## ⬛️Description
 
