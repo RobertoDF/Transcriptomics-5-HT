@@ -118,7 +118,7 @@ results = {"Htrs transcription overview":
 
            "Htr1 & Htr5": u"Receptors belonging to these two families have an inhibitory effect on the host cell, they are coupled to G\u1D62 and cause a downstream decrease of cAMP "
                           "and activation of GIRK channels {Sharp, 2020 #2888; McCorvy, 2015 #2889}. \n"
-                          "Htr1a agonists, such as buspirone, are used as anxiolytics. Htr1b and Htr1d agonists, like triptans, "
+                          "Some Htr1a agonists are currently used as anxiolytics {Parks, 1998 #2950}  and antidepressant. Htr1b and Htr1d agonists, like triptans, "
                           "are effective in treating migraines by causing vasoconstriction of cranial blood vessels."
                           "Htr1a RNA have a stable prevalence of ≈10% across neighborhoods in the scRNA-seq dataset, with virtual absence in the TH-EPI-Glut group (Figure 2A). "
                           "Htr1a co-localized most frequently with Htr1f, Htr2c and Htr2a (Figure 2B) and only in a minority of cases was transcribed alone (<10%). "

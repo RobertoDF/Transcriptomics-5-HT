@@ -22,13 +22,15 @@ legends =  {"Figure 1. Overview of Htrs translation.":
                 "identified by summing the expression of Htrs. Each number represents the "
                 "number of cells in thousands. "}
 
-legends.update({f"Figure {n+2}. {gene} transcription": f"(A) On the left, dotplot representing {gene} prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, violinplots representing the amount of {gene} RNA detected using "
+legends.update({f"Figure {n+2}. {gene} transcription": f"(A) On the left, dotplot representing {gene} prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq "
+                                                       f"and MERFISH dataset. On the right, violinplots representing the amount of {gene} RNA detected using "
                                               f"RNA-seq (top) and MERFISH (bottom). "
-                                              f"(B) Amount of colocalization with each Htrs by cells expressing {gene} RNA (left). Number of Htrs RNA detected in cells "
-                                              f"expressing {gene} RNA (right). "
+                                              f"(B) Amount of colocalization with each Htrs by cells expressing {gene} RNA in the scRNAseq dataset (left). Number of Htrs RNA detected in cells "
+                                              f"expressing {gene} RNA in the scRNAseq dataset  (right). "
                                               f"(C) Prevalence of {gene} RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
-                                              f"On te right, absolute number of cells expressing {gene} RNA by class ranked in descending order (top ten). "
-                                              f"(D) Ranked prevalence of {gene} RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing {gene} RNA that belongs to enriched clusters. "
+                                              f"On te right, absolute number of cells expressing {gene} RNA in the scRNAseq by class, ranked in descending order (top ten). "
+                                              f"(D) Ranked prevalence of {gene} RNA across divisions (left) and structures in the MERFISH dataset(right). "
+                                                       f"Inset represents the proportion of cells expressing {gene} RNA that belongs to enriched clusters. "
                                               f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posterior axis of cells belonging to enriched clusters. "
                                               f"(F) Expression of {gene} RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. "
                                               f"  " for n, gene in enumerate(selected_genes_for_main_fig)})
