@@ -22,7 +22,7 @@ discussion = ("In this work we described the main transcriptional features of ea
               "Htr7 is widely transcribed in subcortical structures, especially in some TH nuclei (PF, PVT, IAD and PT), the mammillary complex (MM and PMd), "
               "the lateral septal nucleus (LSv) and the fasciola cinerea of the HPF. "
               "Our analysis is in no way exhaustive, and it is limited in scope by the constraints of a traditional scientific article. To bypass this limit and, at the same time, "
-              "provide the ability to explore the 5-HT transcription landscape at different depths, we provide a custom online visualizer. The visualizer enables "
+              "provide the ability to explore the 5-HT transcription landscape at different depths, we provide a custom interactive visualizer. The visualizer enables "
               "the exploration of: Htrs transcription in the MERFISH dataset; the prevalence of each Htr across neighborhoods, class, subclass, supertype and clusters; "
               "an overview of Htrs prevalence across classes and subclasses; "
               "and an overview of Htrs prevalence across all brain divisions and structures optionally filtered by neurotransmitter release. Our entire "

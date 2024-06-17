@@ -1,11 +1,11 @@
 import os
 os.chdir("..")
-from Utils.Utils import percentage_above_threshold, percentage_above_threshold_MER
+from Utils.Utils import percentage_above_threshold, percentage_above_threshold_MER, decoddddddd
 import time
 import anndata
 from pathlib import Path
 from Utils.Settings import class_to_division, class_to_broad_division, output_folder_calculations, manifest, download_base, \
-    family_name, threshold_expression, threshold_enriched_clusters
+    family_name, threshold_expression, threshold_enriched_clusters, n_splits
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -286,18 +286,18 @@ color_dict = data_merfish[['parcellation_division_color', 'parcellation_division
 color_dict.update(data_merfish[['parcellation_structure_color', 'parcellation_structure']].drop_duplicates().set_index(
     'parcellation_structure').to_dict()['parcellation_structure_color'])
 
-
+#TODO save these structure otherwise super slow!
 sel = "neurotransmitter"  # "cluster_group_name"#"neurotransmitter"
 
-cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter, report_neurotransmitter  = decoddddddd(joined_boolean, sel)
+cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter, report_neurotransmitter  = decoddddddd(joined_boolean,  sel, selected_genes, n_splits)
 
 sel = "cluster_group_name"#"class"#"cluster_group_name"#"neurotransmitter"
 
-cm_neighborhood, shap_matrix_neighborhood, accuracy_neighborhood, report_neighborhood = decoddddddd(joined_boolean_with_membership, sel);
+cm_neighborhood, shap_matrix_neighborhood, accuracy_neighborhood, report_neighborhood = decoddddddd(joined_boolean_with_membership, sel, selected_genes, n_splits);
 
 sel = "class"#"class"#"cluster_group_name"#"neurotransmitter"
 
-cm_class, shap_matrix_class, accuracy_class, report_class = decoddddddd(joined_boolean, sel);
+cm_class, shap_matrix_class, accuracy_class, report_class = decoddddddd(joined_boolean,  sel, selected_genes, n_splits);
 
 report_class = pd.DataFrame(report_class)#.loc["recall"]
 

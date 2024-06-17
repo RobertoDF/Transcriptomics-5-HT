@@ -20,4 +20,4 @@ abstract = ("Serotonin (5-HT) plays a pivotal role in regulating a wide range of
             "even at the single-cell dimension and"
             " provide new insights into the receptor-mediated mechanisms that underpin diverse neural functions and behaviors. To aid the exploration of Htrs "
             "transcription in the datasets "
-            "we provide a custom online visualizer. This tool enables in-depth analysis at various levels of granularity. ")
+            "we provide a custom interactive visualizer. This tool enables in-depth analysis at various levels of granularity. ")

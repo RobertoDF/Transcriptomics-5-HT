@@ -19,7 +19,7 @@ introduction = ("5-HT stands as a pivotal neuromodulator within the brain, orche
                 "transcription and set a new benchmark for examining their distribution "
                 "against the backdrop of existing literature, contributing to our understanding of the complex roles of 5-HT in brain function. "
                 "To facilitate broader custom exploration of the Htr landscape throughout the brain, "
-                "we have developed an online visualization tool that enables the seamless exploration of both the scRNA-seq and MERFISH dataset at different levels of "
-                "granularity, providing a comprehensive view of the 5-HT receptor distribution. ")
+                "we have developed an interactive visualization tool that enables the seamless exploration of both the scRNA-seq and MERFISH dataset at different levels of "
+                "granularity, providing a comprehensive view of the 5-HT receptor distribution. An online version available here (https://rdef654875678597657-5-ht-transcriptomics.hf.space). ")
 
 
