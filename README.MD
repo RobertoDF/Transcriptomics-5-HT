@@ -42,6 +42,9 @@ The entire analysis is contained in 2 Jupyter notebooks located in the folder 'F
 ```
 conda create --name Transciptomics-5-HT --file requirements.txt
 ```
+To use the interactive visualizer locally by running the Figures/Interactive_vizs.ipynb notebook 
+you need to download [this](https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics/tree/main/Data) data folder and change the 'root_visualizer_data' variable in Utils.Settings 
+to reflect its position on your machine.
 
 ## 🟩License
 
