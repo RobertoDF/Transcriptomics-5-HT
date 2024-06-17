@@ -29,6 +29,7 @@ output_folder = Path(f"{root_github_repo}/Output_figures")
 output_folder_supplementary = Path(f"{root_github_repo}/Output_figures/Supplementary")
 manuscript_folder = Path(f"{root_github_repo}/Manuscript")
 utils_folder = Path(f"{root_github_repo}/Utils")
+root_visualizer_data = Path('/alzheimer/Roberto/Github/Transcriptomics-5-HT-huggingface/Data/')
 
 version = '20230830'
 download_base = '/alzheimer/Roberto/Allen_Institute/abc_download_root'
