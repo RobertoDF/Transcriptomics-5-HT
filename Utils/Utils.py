@@ -1,5 +1,4 @@
 import os
-print("Current working directory:", os.getcwd())
 from pathlib import Path
 import matplotlib.colors as plt_colors
 import matplotlib.pyplot as plt

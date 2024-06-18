@@ -1,6 +1,5 @@
 import os
 os.chdir("..")
-print("Current working directory:", os.getcwd())
 from Utils.Utils import percentage_above_threshold
 import time
 import anndata
@@ -301,10 +300,10 @@ report_class = data['report_neurotransmitter']
 with open(Path(output_folder_calculations, 'output_neighnborhood.pkl'), 'rb') as f:
     data = pickle.load(f)
 
-cm_neighnborhood = data['cm_neighnborhood']
-shap_matrix_neighnborhood = data['shap_matrix_neighnborhood']
-accuracy_neighnborhood = data['accuracy_neighnborhood']
-report_neighnborhood = data['report_neighnborhood']
+cm_neighborhood = data['cm_neighnborhood']
+shap_matrix_neighborhood = data['shap_matrix_neighnborhood']
+accuracy_neighborhood = data['accuracy_neighnborhood']
+report_neighborhood = data['report_neighnborhood']
 
 report_class = pd.DataFrame(report_class)#.loc["recall"]
 

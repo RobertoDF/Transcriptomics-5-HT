@@ -50,7 +50,7 @@ results = {"Htrs transcription overview":
                f"Reflecting the correlation analysis, the confusion matrix showed that Sero and Chol were among the groups with "
                f"higher true positive (TP) rate (Sero={round(cm_neurotransmitter['Sero']['Sero'], 2)}%, "
                f"Chol={round(cm_neurotransmitter['Chol']['Chol'], 2)}%). Cells not transcribing any neurotransmitter, not exhibiting a low r beforehand, were, "
-               f"nonetheless, identified even more successfully ({round(cm_neurotransmitter[''][''], 2)}%). Moreover, "
+               f"nonetheless, identified even more successfully ({round(cm_neurotransmitter['None']['None'], 2)}%). Moreover, "
                f"Noradrenaline (Nora) and glycine (GABA-Glyc) releasing neurons "
                f"were identified at considerable levels (Nora={round(cm_neurotransmitter['Nora']['Nora'], 2)}% and "
                f"GABA-Glyc={round(cm_neurotransmitter['GABA-Glyc']['GABA-Glyc'], 2)}%). "
