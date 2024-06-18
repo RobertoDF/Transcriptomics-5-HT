@@ -7,6 +7,7 @@ from Manuscript.methods import methods
 from Figures.legends import legends
 from Figures.legends_supplementary import legends_supplementary
 from Utils.Settings import manuscript_folder
+
 # to work with citations use {Abi-Saab, 1999 #888}. A Endnote travelling library is provided in the manuscript folder.
 
 doc = DocxTemplate(f"{manuscript_folder}/Manuscript_template.docx")

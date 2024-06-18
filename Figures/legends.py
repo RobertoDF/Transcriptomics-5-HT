@@ -18,8 +18,8 @@ legends =  {"Figure 1. Overview of Htrs translation.":
                 "(E) Htrs expression correlation matrix. "
                 "(F) Htrs colocalization matrix. Each dot represents the percentage of colocalization of gene on x axis in cells transcribing gene on y axis. "
                 "(G) Top: Percentage of cells transcribing the number of Htrs on the x axis. Percentage of cells transcribing the gene on x axis transcribing at least another Htrs gene (middle) or at least other 4 Htrs (bottom). "
-                "(H) Pie charts representing the proportion of principal Htrs grouped by intracellular effector for each neighborhood. Principal effector was "
-                "identified by summing the expression of Htrs. Each number represents the "
+                "(H) Pie charts representing the main pathway activated by 5-HT in each neighborhood . Principal effector was "
+                "identified by summing the amount of RNA belonging to recpeptor of the same family in each cell. Each number represents the "
                 "number of cells in thousands. "}
 
 legends.update({f"Figure {n+2}. {gene} transcription": f"(A) On the left, dotplot representing {gene} prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq "

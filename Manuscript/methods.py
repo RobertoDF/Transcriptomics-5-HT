@@ -156,7 +156,7 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                                                                                                               "patterns across these key sections.",
 
            "Data Visualizer":   "The visualizer was built in Python using Matplotlib, Holoviews and Panel libraries. It is available as a jupyter notebook ('Figures/Interactive_vizs.ipynb') "
-                                "and online (https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics). "
+                                "and online (https://rdef654875678597657-5-ht-transcriptomics.hf.space). "
                                 "The jupyter notebook can be used locally by following the installation instructions available in https://github.com/RobertoDF/Transcriptomics-5-HT. "
                                 "The visualizer is deployed and accessible online on the Hugging Face portal. "
                                 "It is organized in 4 different dashboards: 'Spatial MERFISH', 'Gene by class/subclass/supertype/cluster', "

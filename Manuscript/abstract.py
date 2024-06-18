@@ -23,4 +23,4 @@ abstract = ("Serotonin (5-HT) plays a pivotal role in regulating a wide range of
             "even at the single-cell dimension. "
             "To aid the exploration of Htrs "
             "transcription in the datasets "
-            "we provide an interactive visualizer available online (https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics). This tool enables in-depth analysis at various levels of granularity. ")
+            "we provide an interactive visualizer available online (https://rdef654875678597657-5-ht-transcriptomics.hf.space). This tool enables in-depth analysis at various levels of granularity. ")

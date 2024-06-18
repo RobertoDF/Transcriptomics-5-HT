@@ -134,5 +134,5 @@ n_splits = 5
 
 # Nature style figure letters
 
-Adapt_for_Nature_style = True
+Adapt_for_Nature_style = False
 
