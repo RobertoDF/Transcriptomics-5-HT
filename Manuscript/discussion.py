@@ -6,7 +6,7 @@ discussion = ("In this work we described the main transcriptional features of ea
               f"Htrs patterns of transcription can be used to decode the identity of cells grouped by neurotransmitter, neighborhoods and classes at an above chance level. "
               f"Surprisingly, it was common to detect multiple Htrs within a single cell. This points at the great complexity of the 5-HT "
               f"system even at a cellular level. "
-              "We can recapitulate our results regarding each Htr by summarizing the defining feature of each receptor: "
+              "We can recapitulate our results regarding each Htr by summarizing the defining feature of each receptor (Table 3): "
               "Htr1a is transcribed in an important fraction of Sero neurons of the raphe and some HPF excitatory neurons; "
               "Htr1b is transcribed in many inhibitory striatal neurons and Sero neurons; "
               "Htr1d, similarly to Htr1b, is transcribed in the striatum, although at much lower levels; "

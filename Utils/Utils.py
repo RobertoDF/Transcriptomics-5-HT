@@ -141,7 +141,7 @@ def decoddddddd(joined_boolean, sel, selected_genes, n_splits):
     scorer = make_scorer(balanced_accuracy_score)
     scores = cross_val_score(model, X, y, cv=skf, scoring=scorer, n_jobs=n_splits)
 
-    accuracy = np.mean(scores)
+    accuracy = np.mean(scores) * 100
 
     print(scores)
     print("Accuracy:", accuracy)

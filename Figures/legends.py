@@ -9,15 +9,15 @@ selected_genes_for_main_fig = ['Htr1a', 'Htr1b', 'Htr1f', 'Htr2a', 'Htr2c',
 
 
 legends =  {"Figure 1. Overview of Htrs translation.":
-                "(A) Barplot showing absolute number of cells expressing each Htrs, amount of expression is represented in greyscale, no threshold is applied. "
+                "(A) Barplot showing absolute number of cells transcribing each Htrs, amount of expression is represented in greyscale, no threshold is applied. "
                 f"Inset shows the prevalence of each Htr using  a threshold (log(CPM)>{threshold_expression}). "
                 "(B) UMAP representation color-coded by neighborhood metadata (left), Htr1 (middle) and Htr2 (right) transcription. "
                 "(C) Htr expression prevalence in cells grouped by neurotransmitter release (top). Confusion matrix of the multi-label random forest classifier showing "
                 "true label on y axis and predicted label on x axis (middle). Matrix of absolute SHAP values for each group and receptor (bottom). Glut = Glutamate, GABA = Gamma-Aminobutyric Acid, Glut-GABA = Glutamate and Gamma-Aminobutyric Acid, Dopa = Dopamine, None = No specific neurotransmitter, GABA-Glyc = Gamma-Aminobutyric Acid and Glycine, Chol = Acetylcholine (Cholinergic), Hist = Histamine, Sero = Serotonin, Nora = Norepinephrine. "
                 "(D) Htr expression prevalence in cells grouped byclass. "
                 "(E) Htrs expression correlation matrix. "
-                "(F) Htrs colocalization matrix. Each dot represents the percentage of colocalization of gene on x axis in cells expressing gene on y axis. "
-                "(G) Top: Percentage of cells expressing the number of Htrs on the x axis. Percentage of cells expressing the gene on x axis expressing at least another Htrs gene (middle) or at least other 4 Htrs (bottom). "
+                "(F) Htrs colocalization matrix. Each dot represents the percentage of colocalization of gene on x axis in cells transcribing gene on y axis. "
+                "(G) Top: Percentage of cells transcribing the number of Htrs on the x axis. Percentage of cells transcribing the gene on x axis transcribing at least another Htrs gene (middle) or at least other 4 Htrs (bottom). "
                 "(H) Pie charts representing the proportion of principal Htrs grouped by intracellular effector for each neighborhood. Principal effector was "
                 "identified by summing the expression of Htrs. Each number represents the "
                 "number of cells in thousands. "}
