@@ -22,8 +22,10 @@ legends_supplementary =  {
                                               f"(C) Prevalence of Htr1d RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On te right, absolute number of cells expressing Htr1d RNA by class ranked in descending order (top ten). "
                                               f"(D) Prevalence of Htr1d RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing Htr1d RNA that belongs to enriched clusters. "
-                                              f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posteroir axis f cells belonging to enriched clusters. "
-                                              f"(F) Expression of Htr1d RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. ",
+                                                f"(E) Top: Prevalence of cells from enriched clusters across the antero-posterior axis, "
+                                                f"identified in the scRNA-seq dataset and cross-referenced in the MERFISH dataset. "
+                                                f"Bottom: average amount of RNA expression found in enriched clusters cross-referenced in the MERFISH dataset. "
+                                  f"(F) Expression of Htr1d RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. ",
     
 "Supplementary Figure S6. Htr5a transcription": f"(A) On the left, Htr5a prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, amount of Htr5a RNA detected using "
                                               f"RNA-seq (top) and MERFISH (bottom). "
@@ -32,8 +34,9 @@ legends_supplementary =  {
                                               f"(C) Prevalence of Htr5a RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On te right, absolute number of cells expressing Htr5a RNA by class ranked in descending order (top ten). "
                                               f"(D) Prevalence of Htr5a RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing Htr5a RNA that belongs to enriched clusters. "
-                                              f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posteroir axis f cells belonging to enriched clusters. ",
-    
+                                              f"(E) Prevalence of cells from enriched clusters across the antero-posterior axis, "
+                                                f"identified in the scRNA-seq dataset and cross-referenced in the MERFISH dataset. ",
+
 "Figure S7. Htr5b transcription": f"(A) On the left, Htr5b prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, amount of Htr5b RNA detected using "
                                               f"RNA-seq (top) and MERFISH (bottom). "
                                               f"(B) Amount of co-localization with each Htrs by cells expressing Htr5b RNA (left). Number of Htrs RNA detected in cells "
@@ -41,8 +44,9 @@ legends_supplementary =  {
                                               f"(C) Prevalence of Htr5b RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On te right, absolute number of cells expressing Htr5b RNA by class ranked in descending order (top ten). "
                                               f"(D) Prevalence of Htr5b RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing Htr5b RNA that belongs to enriched clusters. "
-                                              f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posteroir axis f cells belonging to enriched clusters. ",
-    
+                                              f"(E) Prevalence of cells from enriched clusters across the antero-posterior axis, "
+                                                f"identified in the scRNA-seq dataset and cross-referenced in the MERFISH dataset. ",
+
 "Supplementary Figure S8. Htr2b transcription": f"(A) On the left, Htr2b prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, amount of Htr2b RNA detected using "
                                               f"RNA-seq (top) and MERFISH (bottom). "
                                               f"(B) Amount of co-localization with each Htrs by cells expressing Htr2b RNA (left). Number of Htrs RNA detected in cells "
@@ -64,7 +68,9 @@ legends_supplementary =  {
                                               f"(C) Prevalence of Htr3a RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On te right, absolute number of cells expressing Htr3a RNA by class ranked in descending order (top ten). "
                                               f"(D) Prevalence of Htr3a RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing Htr3a RNA that belongs to enriched clusters. "
-                                              f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posteroir axis f cells belonging to enriched clusters. "# TODO fix this legends
+                                              f"(E) Top: Prevalence of cells from enriched clusters across the antero-posterior axis, "
+                                                f"identified in the scRNA-seq dataset and cross-referenced in the MERFISH dataset. "
+                                                f"Bottom: average amount of RNA expression found in enriched clusters cross-referenced in the MERFISH dataset. "
                                               f"(F) Expression of Htr3a RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. ",
     
 "Figure S11. Htr3b transcription": f"(A) On the left, Htr3b prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between RNA-seq and MERFISH dataset. On the right, amount of Htr3b RNA detected using "

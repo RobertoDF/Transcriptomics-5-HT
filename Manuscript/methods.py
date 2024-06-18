@@ -193,10 +193,11 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                 f"of the current selection. Gene prevalence is limited to cluster enriched in the according gene (prevalence within cluster of the gene >{threshold_enriched_clusters}%). "
                                 f"The y axis is populated by the brain structures belonging to the currently selected brain division. For each division we can "
                                 "refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. \n"
-                                "First, we identify enriched clusters in the scRNA-seq dataset then we look at the proportion of cells belonging to enriched clusters over the total number of cells per region. "
+                                "First, we identify enriched clusters in the scRNA-seq dataset then we look at the proportion of cells belonging "
+                                "to enriched clusters over the total number of cells per region. "
                                 "This creates a problem in the cases where a 5-HT receptor was not deemed important by the clustering algorithm, "
-                                "in these cases there might be a really small amount of enriched clusters and most cells will be ignored. "
-                                "To solve this we created a data source selector to enable the possibility to bypass scRNA-seq and look at MERRFISH data only. "
+                                "in these cases most cells will be ignored not belonging to enriched clusters. "
+                                "To solve this we created a 'Data Source Selecto'r to enable the possibility to bypass scRNA-seq and look at MERRFISH data only. "
                                 "In this case we look directly at the ratio of cells transcribing each gene over the total number of cells per region. "
 
            }

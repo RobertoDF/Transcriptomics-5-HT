@@ -1,19 +1,15 @@
 import os
 os.chdir("..")
-from Utils.Utils import percentage_above_threshold, percentage_above_threshold_MER, decoddddddd
+print("Current working directory:", os.getcwd())
+from Utils.Utils import percentage_above_threshold
 import time
 import anndata
 from pathlib import Path
 from Utils.Settings import class_to_division, class_to_broad_division, output_folder_calculations, manifest, download_base, \
-    family_name, threshold_expression, threshold_enriched_clusters, n_splits
+    family_name, threshold_expression, threshold_enriched_clusters
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, accuracy_score
 import pickle
-import shap
-from sklearn.metrics import confusion_matrix
 from scipy.stats import pearsonr as pearsonr
 
 metadata = manifest['file_listing']['WMB-10X']['metadata']
@@ -286,18 +282,29 @@ color_dict = data_merfish[['parcellation_division_color', 'parcellation_division
 color_dict.update(data_merfish[['parcellation_structure_color', 'parcellation_structure']].drop_duplicates().set_index(
     'parcellation_structure').to_dict()['parcellation_structure_color'])
 
-#TODO save these structure otherwise super slow!
-sel = "neurotransmitter"  # "cluster_group_name"#"neurotransmitter"
+with open(Path(output_folder_calculations, 'output_neurotransmitter.pkl'), 'rb') as f:
+    data = pickle.load(f)
 
-cm_neurotransmitter, shap_matrix_neurotransmitter, accuracy_neurotransmitter, report_neurotransmitter  = decoddddddd(joined_boolean,  sel, selected_genes, n_splits)
+cm_neurotransmitter = data['cm_neurotransmitter']
+shap_matrix_neurotransmitter = data['shap_matrix_neurotransmitter']
+accuracy_neurotransmitter = data['accuracy_neurotransmitter']
+report_neurotransmitter = data['report_neurotransmitter']
 
-sel = "cluster_group_name"#"class"#"cluster_group_name"#"neurotransmitter"
+with open(Path(output_folder_calculations, 'output_class.pkl'), 'rb') as f:
+    data = pickle.load(f)
 
-cm_neighborhood, shap_matrix_neighborhood, accuracy_neighborhood, report_neighborhood = decoddddddd(joined_boolean_with_membership, sel, selected_genes, n_splits);
+cm_class = data['cm_neurotransmitter']
+shap_matrix_class = data['shap_matrix_neurotransmitter']
+accuracy_class = data['accuracy_neurotransmitter']
+report_class = data['report_neurotransmitter']
 
-sel = "class"#"class"#"cluster_group_name"#"neurotransmitter"
+with open(Path(output_folder_calculations, 'output_neighnborhood.pkl'), 'rb') as f:
+    data = pickle.load(f)
 
-cm_class, shap_matrix_class, accuracy_class, report_class = decoddddddd(joined_boolean,  sel, selected_genes, n_splits);
+cm_neighnborhood = data['cm_neighnborhood']
+shap_matrix_neighnborhood = data['shap_matrix_neighnborhood']
+accuracy_neighnborhood = data['accuracy_neighnborhood']
+report_neighnborhood = data['report_neighnborhood']
 
 report_class = pd.DataFrame(report_class)#.loc["recall"]
 

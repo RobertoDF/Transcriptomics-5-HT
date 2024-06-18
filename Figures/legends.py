@@ -31,8 +31,8 @@ legends.update({f"Figure {n+2}. {gene} transcription": f"(A) On the left, dotplo
                                               f"On te right, absolute number of cells expressing {gene} RNA in the scRNAseq by class, ranked in descending order (top ten). "
                                               f"(D) Ranked prevalence of {gene} RNA across divisions (left) and structures of enriched clusters found in the scRNAseq dataset in the MERFISH dataset(right). "
                                                        f"Inset represents the proportion of cells expressing {gene} RNA that belongs to enriched clusters. "
-                                              f"(E) Top: Prevalence across the antero-posterior axis of cells belonging "
-                                                       f"to enriched clusters found in the scRNA seq dataset and analyzed in the MERFISH dataset. "
-                                                       f"Bottom: average amount of RNA expression found in enriched clusters crossreferenced in the MERFISH dataset"# TODO write better
+                                              f"(E) Top: Prevalence of cells from enriched clusters across the antero-posterior axis, "
+                                                       f"identified in the scRNA-seq dataset and cross-referenced in the MERFISH dataset. "
+                                                       f"Bottom: average amount of RNA expression found in enriched clusters cross-referenced in the MERFISH dataset. "
                                               f"(F) Expression of {gene} RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. "
                                               f"  " for n, gene in enumerate(selected_genes_for_main_fig)})

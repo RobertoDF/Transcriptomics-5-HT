@@ -1,4 +1,5 @@
 import os
+print("Current working directory:", os.getcwd())
 from pathlib import Path
 import matplotlib.colors as plt_colors
 import matplotlib.pyplot as plt
@@ -15,9 +16,6 @@ from sklearn.metrics import  balanced_accuracy_score, classification_report
 import shap
 from sklearn.metrics import confusion_matrix
 
-# cmaps
-
-metadata = manifest['file_listing']['WMB-10X']['metadata']
 
 metadata = manifest['file_listing']['WMB-neighborhoods']['metadata']
 rpath = metadata['cluster_group_membership']['files']['csv']['relative_path']

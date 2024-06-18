@@ -27,7 +27,7 @@ results = {"Htrs transcription overview":
                f"When looking at the UMAP distributions of individual Htr, considerable differences were also present within each family of receptors (Figure S2). "
                f"We analyzed these differences grouping cells by "
                "neurotransmitter, neighborhood or class (Figure S1B). The cells were subdivided into four nested levels of classification (as defined in {Yao, 2023 #2886}) with "
-               "34 classes, 338 subclasses, 1,201 supertypes and 5,322 clusters. " # TODO explain this more
+               "34 classes, 338 subclasses, 1,201 supertypes and 5,322 clusters. " 
                "These categorizations divided cells in a highly skewed fashion (Figure S1C). "
                f"For example, when looking at neurotransmitter-release, "
                f"3 groups (Glut, Gaba and unassigned) made up almost the totality of cells "
@@ -122,16 +122,17 @@ results = {"Htrs transcription overview":
                "MERFISH dataset (see {Zhang, 2023 #2887}), we could identify the spatial distribution in the MERFISH dataset of cells belonging to enriched clusters defined using the scRNA-seq. "
                "This approach worked in all cases where enriched clusters could be identified. "
                "In some cases only a minority of cells transcribing the selected Htr gene belonged to enriched clusters, for this reason "
-               "we offer the option to bypass the scRNA-seq enriched cluster calculations and directly view the prevalence " # TODO check this
+               "we offer the option to bypass the scRNA-seq enriched cluster calculations and directly view the prevalence " 
                "of all cells transcribing the selected gene in the MERFISH dataset using the interactive visualizer "
-               "(see 'Spatial MERFISH' and 'Overview genes by brain structure' dasboards). \n", # TODO add precise instructions
+               "(see 'Spatial MERFISH' and 'Overview genes by brain structure' dashboards, the latter with 'Data Source selector'='MERFISH only'). \n",
            
 
            "Htr1 & Htr5": u"Receptors belonging to these two families have an inhibitory effect on the host cell, they are coupled to G\u1D62 and cause a downstream decrease of cAMP "
                           "and activation of GIRK channels {Sharp, 2020 #2888; McCorvy, 2015 #2889}. \n"
-                          "Some Htr1a agonists are currently used as anxiolytics {Parks, 1998 #2950} and antidepressant, the link between 5-HT imbalances, 5-HT1A activity "
-                          "and depression is, however, controversial and has been called in question {Moncrieff, 2023 #2951}. Htr1b and Htr1d agonists, like triptans, "#TODO add ref
-                          "are effective in treating migraines by causing vasoconstriction of cranial blood vessels. "#TODO check this
+                          "Some Htr1a agonists are currently used as anxiolytics {Parks, 1998 #2950} and antidepressant {Harmer, 2017 #2953; Yohn, 2017 #2954; Cowen, 2015 #2955},"
+                          " the link between 5-HT imbalances, 5-HT1A activity "
+                          "and depression is, however, controversial and has been called in question {Moncrieff, 2023 #2951}. Htr1b and Htr1d agonists, like triptans, "
+                          "are effective in treating migraines {Ferrari, 2002 #2956}. "
                           "Htr1a RNA has a stable prevalence of ≈10% across neighborhoods in the scRNA-seq dataset, with virtual absence in the TH-EPI-Glut group (Figure 2A). "
                           "Htr1a co-localized most frequently with Htr1f, Htr2c and Htr2a (Figure 2B) and only in a minority of cases was transcribed alone (<10%). "
                           "Transcription across classes was highly correlated between the scRNA-seq and MERFISH datasets (Figure 2A) "
@@ -141,7 +142,8 @@ results = {"Htrs transcription overview":
                           "like in most Htrs, "
                           "contained the highest absolute number of cells transcribing the receptor. "
                           "Subclasses located in the hippocampus (HPF, see Table 2 for a list of acronyms) "
-                          "contained most of the cortical cells transcribing Htr1a (see interactive visualizer, 'Overview genes by class'). " # TODO add precise instructions
+                          "contained most of the cortical cells transcribing Htr1a (see interactive visualizer, 'Overview genes by class/subclass', "
+                          "'Class selector'='01 IT-ET Glut', 'Group by'='subclass'). " 
                           f"Only {perc_enriched_htr1a}% of Htr1a transcribing cells were contained in enriched clusters, "
                           "pointing at a relatively low importance of this receptor in the clustering algorithm used by {Yao, 2023 #2886}. "
                           "Looking at the spatial distribution across divisions, e.g., high level regional areas, the highest prevalence was found in the pallidum (PAL) and HPF (Figure 2D). "
@@ -154,7 +156,8 @@ results = {"Htrs transcription overview":
                           "the medial septum nucleus (MS) and the diagonal band nucleus (NDB), "
                           "two structures linked to generation of theta waves {Winson, 1978 #2908} and containing Chol neurons, contributed substantially to the transcription in PAL. "
                           "Notably, "
-                          "all these results confirms previous reports of Htr1a expression in the raphe {Haj-Dahmane, 1991 #2924;Sprouse, 1987 #2923}, ENTm {Schmitz, 1995 #2925; de Filippo, 2021 #1086} "
+                          "all these results confirms previous reports of Htr1a expression in the raphe {Haj-Dahmane, 1991 #2924;Sprouse, 1987 #2923}, "
+                          "ENTm {Schmitz, 1995 #2925; de Filippo, 2021 #1086} "
                           "and MS {Kia, 1996 #2926}. "
                           "Levels of transcription were stable across the anterior-posterior axis like in most other Htrs (Figure 2E-F). "
    
@@ -170,7 +173,7 @@ results = {"Htrs transcription overview":
                           f"only minimal transcription in this class ({round(joined.groupby('class')['Htr1a'].apply(percentage_above_threshold)['09 CNU-LGE GABA'], 2)}%). "
                           f"Also in this case, 01 IT-ET Glut exhibited the highest absolute number of Htr1b transcribing cells, specifically, in a subclass "
                           f"of the nucleus of the lateral olfactory tract "
-                          f"(NLOT, see interactive visualizer, 'Overview genes by class'). "# TODO add precise instructions
+                          f"(NLOT, see interactive visualizer, 'Overview genes by class', 'Class selector'='01 IT-ET Glut', 'Group by'='subclass'). "
                           f"{perc_enriched_htr1b}% of Htr1b transcribing cells belonged to enriched clusters and the "
                           f"striatum (STR) showed an impressive high prevalence with "
                           ">30% (Figure 3D), in line with previous reports {Maroteaux, 1992 #2928; Pommer, 2021 #2927}. "
@@ -195,13 +198,14 @@ results = {"Htrs transcription overview":
                           f"decreased linearly with the number of co-transcribed Htrs (Figure 4B). "
                           f"Notably, the slope of the linear regression between values provided by scRNA-seq and MERFISH was "
                           f"significantly lower pointing at a difference in absolute prevalence per class (Figure 4C). "
-                          f"This difference can be imputed to the different technique employed (see https://community.brain-map.org/t/consistent-difference-in-expression-between-zhuang-and-zeng-merfish-datasets/2604/2). "
+                          f"This difference can be imputed to the different technique employed "
+                          f"(see https://community.brain-map.org/t/consistent-difference-in-expression-between-zhuang-and-zeng-merfish-datasets/2604/2). "
                           f"The two datasets are, however, still highly correlated, with 66% of shared variability. "
                           f"This was the case also for Htr2a, Htr2c and Htr4. Htr1f was broadly transcribed across almost all classes, "
                           f"including some non-neuronal cells. Pineal gland cells were a notable exception. "
                           f"In absolute numbers, cortical glutamatergic cells showed the highest transcription. "
                           f"Various subclasses located in layer 5, claustrum (CLA) and HPF exhibited prevalence >50% "
-                          f"(see interactive visualizer, 'Overview genes by class'). "
+                          f"(see interactive visualizer, 'Overview genes by class', 'Class selector'='01 IT-ET Glut', 'Group by'='subclass'). "
                           f"Spatial distribution showed a peculiarly asymmetric pattern with transcription concentrated in the most anterior regions. "
                           f"Highest transcription was observed in STR, olfactory areas (OLF) and the cortical subplate (CTXsp) "
                           f"reaching >20% (Figure 4D). Specifically, the highest transcription was observed in nucleus accumbens (ACB) and olfactory tract (OT), similarly to Htr1b. "
@@ -209,9 +213,9 @@ results = {"Htrs transcription overview":
                           f"was the OLF structure with the highest prevalence. CLA and the endopiriform nucleus (EPd), "
                           f"on the other hand, were the CTXsp structure exhibiting the highest prevalence. "
                           f"Interestingly, in the CTXsp, transcription in Glut and Gaba neurons was anticorrelated. High prevalence in Glut neurons "
-                          f"corresponded to lower prevalence in Gaba "# TODO add precise instructions
+                          f"corresponded to lower prevalence in Gaba "
                           f"and vice versa. In CLA and EPd HTR1f was transcribed mainly in Glut neurons, while in the amygdala (LA, BLA, BMA) predominantly in Gaba neurons "
-                          f"(see interactive visualizer, 'Overview genes by brain structure'). "
+                          f"(see interactive visualizer, 'Overview genes by brain structure', 'Division selector'='CTXsp', 'Neurotransmitter selector'='Glut' vs 'GABA'). "
                           f"Isocortex and HPF "
                           f"also exhibited considerable transcription both in excitatory and inhibitory neurons. The amount of RNA "
                           f"transcription per cell was not linear, with a clear peak in the frontal olfactory areas (Figure 4E-F). High transcription of Htr1f in this region "
@@ -229,23 +233,25 @@ results = {"Htrs transcription overview":
                           "in the medial habenula (MH, Figure S7D-E), a structure involved in the response to stress and fear "
                           "{Chou, 2016 #2913; Soria-Gomez, 2015 #2910; Winson, 1978 #2908;Yamaguchi, 2013 #2909}. "
                           "Some transcription was also evident in the posterior part of the brain, "
-                          "specifically in the inferior olivary complex (IO), driven by a single supertype, 253 IO Fgl2 Glut,"
-                          " and some structures populated by Sero neurons. \n", # TODO add instructions
+                          "specifically in the inferior olivary complex (IO), driven by a single subclass, 253 IO Fgl2 Glut (see interactive visualizer, 'Overview genes by class/subclass', "
+                          "'Class selector'='24 MY Glut', 'Group by'='subclass'),"
+                          " and some structures populated by Sero neurons. \n",
 
            "Htr2": "The Htr2 family is mainly linked to Gq/11 and causes depolarization by increasing intracellular Ca2+. "
                    "Htr2a antagonists, such as atypical antipsychotics (e.g., clozapine and risperidone), are "
-                   "currently used in treating schizophrenia and other psychiatric disorders. Htr2c"# TODO check
+                   "currently used in treating schizophrenia and other psychiatric disorders. Htr2c"
                    " antagonists are being explored for their potential in treating obesity and metabolic disorders {He, 2022 #2942; Yao, 2021 #2943}. Htr2a, "
                    "instrumental in mediating the effects of psychedelics {Nichols, 2016 #854},"
                    " is found across the brain with highest prevalence in telencephalic neighborhoods, Pallium-Glut and Subpallium-GABA (Figure 5A). "
                    "Co-localization was highest with Htr1f and Htr2c (Figure 5B). Highest transcription (≈40%) was found in 01 IT-ET Glut, 07 CTX-MGE GABA "
                    "and 16 HY-MM Glut classes (Figure 5C). Interestingly, somatostatin (Sst) neurons belonging to 07 CTX-MGE GABA, "
                    "while exhibiting a relatively low prevalence at the subclass level, contained various clusters "
-                   "with >70% prevalence {De Filippo, 2024 #2904}. "#TODO add instructions
+                   "with >70% prevalence {De Filippo, 2024 #2904} (see interactive visualizer, 'Overview genes by class/subclass', "
+                    "'Class selector'='07 CTX-MGE GABA', 'Subclass selector'='053 Sst Gaba', 'Group by'='cluster'). "
                    "Htr2a was also prevalent across many other classes across the whole brain. "
                    "01 IT-ET Glut exhibited by far the highest absolute number "
                    "of neurons transcribing Htr2a, specifically in subclasses of layer 5 and CLA, "
-                   "resembling Htr1f (see interactive visualizer, 'Overview genes by class'). "#TODO add instructions
+                   "resembling Htr1f (see interactive visualizer, 'Overview genes by class/subclass', 'Class selector'='01 IT-ET Glut', 'Group by'='subclass'). "
                    "CTXsp showed the highest prevalence, reaching >12% (Figure 5D). Isocortex and STR exhibited both ≈5% prevalence. "
                    "At a structure level, two structures belonging to the mammillary complex "
                    "(dorsal premammillary nucleus, PMd and tuberomammillary nucleus, TMd) were in the top ten by prevalence. The mammillary complex "
@@ -270,13 +276,14 @@ results = {"Htrs transcription overview":
                    f"Many classes exhibited a >60% prevalence. "
                    "As usual, cortical excitatory neurons exhibited the highest absolute number "
                    f"of cells transcribing Htr2c. Some subclasses in OLF, amygdala and retrosplenial cortex (RSP) "
-                   f"exhibited >80% prevalence (see interactive visualizer, 'Overview genes by class'). "#TODO add instructions
+                   f"exhibited >80% prevalence (see interactive visualizer, 'Overview genes by class/subclass', 'Class selector'='01 IT-ET Glut', 'Group by'='subclass'). "
                    f"The majority of cells expressing Htr2c RNA belonged to enriched clusters. "
                    f"Highest prevalence was found in STR. Similarly to Htr1b, ACB, CP and OT exhibited the highest prevalence (Figure 6D-E-F). "
                    f"Isocortex prevalence derived from the "
                    f"unique transcription in excitatory neurons of the ventral part of the RSP, "
                    f"curiously the area with lowest transcription of Htr1f, otherwise highly prevalent in "
-                   f"all other cortical regions. " #TODO add instructions
+                   f"all other cortical regions (see interactive visualizer, 'Overview genes by brain structure', "
+                   f"'Division selector'='Isocortex', 'Neurotransmitter selector'='Tot'). " 
                    f"Htr2a RNA was also minimally expressed in this specific area. "
                    f"High prevalence was observed also in excitatory neurons of "
                    f"the anterior olfactory nucleus (AON), piriform area (PIR and PAA) and amygdala (LA and BLA). "
@@ -291,13 +298,16 @@ results = {"Htrs transcription overview":
                                   "the 17 MH-LH Glut class, specifically in Chol releasing neurons belonging to this class located in TH. "
                                   "In absolute numbers, transcription in excitatory cortical neurons was the highest, but not overwhelmingly so like in other cases, "
                                   "driven specifically "
-                                  "by subclasses of CA1, CA2, CA3 and subiculum (see interactive visualizer, 'Overview genes by class'). " #TODO add instructions
+                                  "by subclasses of CA1, CA2, CA3 and subiculum (see interactive visualizer, 'Overview genes by class/subclass', "
+                                  "'Class selector'='01 IT-ET Glut', 'Group by'='subclass'). "
                                   "Spatial distribution exhibited a peculiar pattern "
                                   "with high prevalence in one specific structure of the STR: OT (Figure 7D-E-F). A subclass of interneurons present in OT (060 OT D3 Folh1 Gaba) "
-                                  "showed a >98% prevalence. "#TODO add instructions
+                                  "showed a >98% prevalence (see interactive visualizer, 'Overview genes by class/subclass', 'Class selector'='09 CNU-LGE GABA', 'Group by'='subclass'). "
                                   "PAL and HPF also exhibited relatively high prevalence (≈10%). "
                                   "Dentate gyrus (DG) granule cells (037 DG Glut) were one of the reasons of the high prevalence in HPF. "
-                                  "Excitatory cells of CA2, CA3 and indusium griseum (IG) also transcribed Htr4 RNA (see interactive visualizer, 'Overview genes by brain structure'). \n"#TODO add instructions
+                                  "Excitatory cells of CA2, CA3 and indusium griseum (IG) also transcribed Htr4 RNA "
+                                  "(see interactive visualizer, 'Overview genes by brain structure', "
+                                  "'Division selector'='HPF', 'Neurotransmitter selector'='Glut' vs 'GABA'). \n"
                                   
                                   "We do not have MERFISH information about the rarely transcribed Htr6 and no enriched cluster was "
                                   f"present in the scRNA-seq dataset. The 09 NU-LGE GABA class exhibited the highest prevalence with "
@@ -312,7 +322,8 @@ results = {"Htrs transcription overview":
                                   "Htr1f and Htr4. Htr7 was broadly transcribed across classes, especially in subcortical structures. "
                                   "Peak prevalence was found in 10 LSX GABA, 16 MY MM Glut and 18 TH Glut with >60% "
                                   "(Figure 8C). Cortical transcription in excitatory neurons is driven primarily by "
-                                  "subclasses in CA2 and L2 ENT (see interactive visualizer, 'Overview genes by class'). "#TODO add instructions
+                                  "subclasses in CA2 and L2 ENT (see interactive visualizer, 'Overview genes by class/subclass', "
+                                  "'Class selector'='01 IT-ET Glut', 'Group by'='subclass'). "
                                   "Htr7 enriched clusters were located mainly in HY and TH (Figure 8D). "
                                   "At a structure level, the parafascicular (PF)  and paraventricular nucleus (PVT) of TH showed the highest prevalence (>30%). ",
 
