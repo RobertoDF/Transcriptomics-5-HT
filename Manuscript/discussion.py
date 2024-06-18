@@ -2,7 +2,8 @@ from Utils.Results_variables import *
 
 discussion = ("In this work we described the main transcriptional features of each Htr across the entire brain, "
               "leveraging two datasets provided by {Yao, 2023 #2886} and {Zhang, 2023 #2887}. "
-              f"We found that Htrs RNA is transcribed in around 2 every 3 cells and 6 Htrs were transcribed in >10% of cells, with Htr1f reaching a peak of {expression_total.max()}%. "
+              f"In the scRNA-seq dataset we found that Htrs RNA is transcribed in around 2 every 3 cells "#TODO add percentage
+              f"and 6 Htrs were transcribed in >10% of cells, with Htr1f reaching a peak of {expression_total.max()}%. "
               f"Htrs patterns of transcription can be used to decode the identity of cells grouped by neurotransmitter, neighborhoods and classes at an above chance level. "
               f"Surprisingly, it was common to detect multiple Htrs within a single cell. This points at the great complexity of the 5-HT "
               f"system even at a cellular level. "
@@ -27,8 +28,9 @@ discussion = ("In this work we described the main transcriptional features of ea
               "an overview of Htrs prevalence across classes and subclasses; "
               "and an overview of Htrs prevalence across all brain divisions and structures optionally filtered by neurotransmitter release. Our entire "
               "analysis pipeline can be easily modified to enable the exploration of different families of genes. "
-              "Instructions are available in 'Jupyter notebooks structures' in the methods section. "
-              "One constraint of our study is the indirect characterization of Htrs through the detection of RNA molecules, rather than direct assessment of their presence. "
+              "Instructions are available in 'Jupyter notebooks structures' section of the methods. "
+              "One constraint of our study is the indirect characterization of Htrs through the detection of RNA molecules, "
+              "rather than direct assessment of their presence. "
               "However, this potential limitation is mitigated by the fact that mRNA levels are frequently a reliable indicator of receptor expression {Vilaró, 2020 #2939}. Conversely, "
               "while mapping receptors directly allows for precise localization, it fails to differentiate between pre- and postsynaptic expression, "
               "an important aspect of understanding receptor function and distribution. "

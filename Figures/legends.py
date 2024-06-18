@@ -29,8 +29,10 @@ legends.update({f"Figure {n+2}. {gene} transcription": f"(A) On the left, dotplo
                                               f"expressing {gene} RNA in the scRNAseq dataset  (right). "
                                               f"(C) Prevalence of {gene} RNA across all classes of cells in RNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On te right, absolute number of cells expressing {gene} RNA in the scRNAseq by class, ranked in descending order (top ten). "
-                                              f"(D) Ranked prevalence of {gene} RNA across divisions (left) and structures in the MERFISH dataset(right). "
+                                              f"(D) Ranked prevalence of {gene} RNA across divisions (left) and structures of enriched clusters found in the scRNAseq dataset in the MERFISH dataset(right). "
                                                        f"Inset represents the proportion of cells expressing {gene} RNA that belongs to enriched clusters. "
-                                              f"(E) Prevalence (top) and average amount of RNA expression in the MERFISH dataset across the antero-posterior axis of cells belonging to enriched clusters. "
+                                              f"(E) Top: Prevalence across the antero-posterior axis of cells belonging "
+                                                       f"to enriched clusters found in the scRNA seq dataset and analyzed in the MERFISH dataset. "
+                                                       f"Bottom: average amount of RNA expression found in enriched clusters crossreferenced in the MERFISH dataset"# TODO write better
                                               f"(F) Expression of {gene} RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. "
                                               f"  " for n, gene in enumerate(selected_genes_for_main_fig)})
