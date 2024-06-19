@@ -2,37 +2,22 @@
 
 The complete manuscript (figures + text) can be reproduced using Python code present in this repository. Each number present in the text is an f-String that can be traced back to a data structure (see [End2EndPaper](https://github.com/RobertoDF/End2EndPaper)).
 
-## 🟧[Online visualizer](https://huggingface.co/spaces/RDeF654875678597657/5-HT-Transcriptomics) 🧠
+## 🟧[Online visualizer](https://rdef654875678597657-5-ht-transcriptomics.hf.space) 🧠
 
 *The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, remaining tabs are associated with the RNA-seq dataset. 
 Data source for each dashboard is annotated in the title between parentheses*
 
 **All colorbars represent prevalence (% of cells transcribing the selected gene)**
 
-### 'Spatial MERFISH': 
-5 interactive controls enable the selections of different datasets from {Zhang, 2023 #2887}, brain section, gene, class and subclass. The datasets available are 2 coronal (Zhuang-ABCA-1/2) and 2 sagittals (Zhuang-ABCA-3/4). The brain section selector enables the visualization of different slices. The gene selector enables the selection of a specific gene. Class and subclass selector restrict the visualization to selected groups. 6 panels are provided. From top to bottom: lineplot representing the proportion of cells selected out the cells available across the spatial axis associated to each dataset, lineplot representing the amount of transcription across space of the selected gene, lineplot representing the percentage of cells across space in which RNA of the selected gene was detected (threshold set at 0.3), barplot representing the percentage of Htr positive cells in the selected slice grouped by brain structure (number in each bar is the absolute number of cells) and two panels representing the slice selected with the gene transcription on the left and atlas metadata on the right. 
-
-### 'Gene by class/subclass/supertype/cluster': 
-2 interactive controls enable the selections of neighborhood group and gene. The neighborhood selector enables the selection of a specific neighborhood. The gene selector enables the selection of a specific gene. For each class of neurons we provide 3 levels of visualization. On top, violinplots representing the gene prevalence by subclass; in the middle, violinplots representing prevalence by supertype and on the bottom barplots representing prevalence by cluster. Each subclass is color-coded according to the panel available for each class. 
-
-### 'Overview genes by class': 
-4 interactive controls enable the selections of class, subclass, type of grouping and sorting. The class and subclass selectors enable the selection of a specific class and subclass, respectively. 
-The plot can be grouped at different levels of detail: classes, subclasses, supertypes and even individual clusters (the number of groups that can visualized at the same time is limited by the maximum recursion depth of Holoviews). 
-The plot can be sorted by the group´s alphabetical name or gene expression. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. Y axis is populated by the name of the groups selected by the "Group by" selector. X axis shows each Htrs. 
-
-### 'Overview genes by brain structure': 
-4 interactive controls enable the selections of data source, division, neurotransmitter and sorting. 
-The division and neurotransmitter selectors enable the selection of a specific brain division and neurotransmitter, 
-respectively. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. 
-With Data Source="Default" gene prevalence is limited to clusters enriched in the according gene (prevalence within cluster of the gene >70%).
-The y axis is populated by the brain structures belonging to the currently selected brain division. For each division 
-we can refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. 
-
-First we identify enriched clusters in the RNA-seq dataset then we look at the proportion of cells belonging to enriched clusters over the total number of cells per region. 
-This creates a problem in the cases where a 5-HT receptor was not deemed important by the clustering algo, 
-in these cases there might be a small amount of enriched clusters and most cells will be simply ignored (if 100 positive cells all belong to one cluster they will make it "enriched", 
-if, on the other hand, they are split in multiple clusters tehy will be ignored). 
-To solve this we create a data source selector ("MERFISH") to enable the possibility to bypass the RNA-seq clustering and look at MERFISH data only. In this case we look directly at the ratio of cells transcribing each gene over the total number of cells per region. 
+## 'Spatial MERFISH'
+Five interactive controls enable the selections of different datasets from (Zhang et al., 2023), brain section, gene, class and subclass. The datasets available are 2 coronal (Zhuang-ABCA-1/2) and 2 sagittal (Zhuang-ABCA-3/4). The controls allow visualization of different slices, specific genes, and selected groups. The dashboard includes six panels: 1. Lineplot representing the proportion of cells selected across the spatial axis associated to each dataset, 2. Lineplot representing the amount of transcription across space of the selected gene, 3. Lineplot representing the percentage of cells across space in which RNA of the selected gene was detected (threshold set at 0.3), 4. Barplot representing the percentage of Htr positive cells in the selected slice grouped by brain structure (number in each bar is the absolute number of cells), 5-6. Slice selected with gene transcription (left) and atlas metadata (right). 
+##  'Gene by class/subclass/supertype/cluster'
+This dashboard has two interactive controls for selecting neighborhood group and gene. For each class of neurons, three levels of visualization are provided: 1. Violinplots: Gene prevalence by subclass, 2.Violinplots: Prevalence by supertype, 3. Barplots: Prevalence by cluster. 
+## 'Overview genes by class'
+'Overview genes by class': This dashboard includes four interactive controls for selecting class, subclass, type of grouping, and sorting. The plot can be grouped at different clustering depths: classes, subclasses, supertypes and even individual clusters (the number of groups that can visualized at the same time is limited by the maximum recursion depth of Holoviews). The plot can be sorted by the group�s alphabetical name or gene transcription. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. Y axis is populated by the name of the groups selected by the "Group by" selector. X axis shows each Htrs. 
+## 'Overview genes by brain structure'  
+This dashboard includes four interactive controls for selecting data source, division, neurotransmitter, and sorting. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. Gene prevalence is limited to cluster enriched in the according gene (prevalence within cluster of the gene >70%). The y axis is populated by the brain structures belonging to the currently selected brain division. For each division we can refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. 
+First, enriched clusters in the scRNA-seq dataset are identified, then the proportion of cells belonging to enriched clusters over the total number of cells per region is analyzed. To handle cases where most cells do not belong to enriched clusters and are ignored, a 'Data Source Selector' is used to bypass scRNA-seq data and use MERRFISH data directly.In this case we look directly at the ratio of cells transcribing each gene over the total number of cells per region.  
 
 ## ⬛️Description
 
