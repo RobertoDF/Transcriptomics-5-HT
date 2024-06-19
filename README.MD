@@ -9,15 +9,15 @@ Data source for each dashboard is annotated in the title between parentheses*
 
 **All colorbars represent prevalence (% of cells transcribing the selected gene)**
 
-### 'Spatial MERFISH'
+#### 'Spatial MERFISH'
 Five interactive controls enable the selections of different datasets from (Zhang et al., 2023), brain section, gene, class and subclass. The datasets available are 2 coronal (Zhuang-ABCA-1/2) and 2 sagittal (Zhuang-ABCA-3/4). The controls allow visualization of different slices, specific genes, and selected groups. The dashboard includes six panels: 1. Lineplot representing the proportion of cells selected across the spatial axis associated to each dataset, 2. Lineplot representing the amount of transcription across space of the selected gene, 3. Lineplot representing the percentage of cells across space in which RNA of the selected gene was detected (threshold set at 0.3), 4. Barplot representing the percentage of Htr positive cells in the selected slice grouped by brain structure (number in each bar is the absolute number of cells), 5-6. Slice selected with gene transcription (left) and atlas metadata (right). 
-###  'Gene by class/subclass/supertype/cluster'
+####  'Gene by class/subclass/supertype/cluster'
 This dashboard has two interactive controls for selecting neighborhood group and gene. For each class of neurons, three levels of visualization are provided: 1. Violinplots: Gene prevalence by subclass, 2.Violinplots: Prevalence by supertype, 3. Barplots: Prevalence by cluster. 
-### 'Overview genes by class/subclass'
+#### 'Overview genes by class/subclass'
  This dashboard includes four interactive controls for selecting class, subclass, type of grouping, and sorting. 
  The plot can be grouped at different clustering depths: classes, subclasses, supertypes and even individual clusters 
  (the number of groups that can visualized at the same time is limited by the maximum recursion depth of Holoviews). The plot can be sorted by the group´s alphabetical name or gene transcription. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. Y axis is populated by the name of the groups selected by the "Group by" selector. X axis shows each Htrs. 
-### 'Overview genes by brain structure'  
+#### 'Overview genes by brain structure'  
 This dashboard includes four interactive controls for selecting data source, division, neurotransmitter, and sorting. Gene prevalence is represented with a heatmap in which the colorbar is updated according to the limits of the current selection. Gene prevalence is limited to cluster enriched in the according gene (prevalence within cluster of the gene >70%). The y axis is populated by the brain structures belonging to the currently selected brain division. For each division we can refine our selection by isolating neurons releasing a specific neurotransmitter. X axis shows each Htrs. 
 First, enriched clusters in the scRNA-seq dataset are identified, then the proportion of cells belonging to enriched clusters over the total number of cells per region is analyzed. To handle cases where most cells do not belong to enriched clusters and are ignored, a 'Data Source Selector' is used to bypass scRNA-seq data and use MERRFISH data directly.In this case we look directly at the ratio of cells transcribing each gene over the total number of cells per region.  
 
