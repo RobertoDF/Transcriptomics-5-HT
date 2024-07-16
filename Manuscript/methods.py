@@ -162,7 +162,7 @@ methods = {"Jupyter notebooks structure": "The entire analysis is contained in 2
                                 "It is organized in four different dashboards: 'Spatial MERFISH', 'Gene by class/subclass/supertype/cluster', "
                                 "'Overview genes by class' and 'Overview genes by brain structure'. "
                                 "The 'Spatial MERFISH' and 'Overview genes by brain structure' are associated with the MERFISH dataset, "
-                                "remaining tabs are associated with the scRNA-seq dataset. Each dashboard's data source is annotated in the title.. "
+                                "remaining tabs are associated with the scRNA-seq dataset. Each dashboard's data source is annotated in the title. "
                                 "'Spatial MERFISH': Five interactive controls enable the selections of different datasets from {Zhang, 2023 #2887}, brain section, gene, class and subclass. "
                                 "The datasets available are 2 coronal (Zhuang-ABCA-1/2) and 2 sagittal (Zhuang-ABCA-3/4). "
                                 "The controls allow visualization of different slices, specific genes, and selected groups. The dashboard includes six panels: "
