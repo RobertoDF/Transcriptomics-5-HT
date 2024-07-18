@@ -51,8 +51,13 @@ cell_with_membership = cell_with_membership[cell_with_membership['cluster_group_
 
 selected_genes = exp.columns.sort_values()
 
-joined = cell.join(exp)
-joined_boolean =  cell.join( exp>threshold_expression  )
+exp_with_tot = exp.copy()
+exp_with_tot["Any Htr"] = exp[exp>threshold_expression].any(axis=1).replace({True: 10})
+
+joined = cell.join(exp_with_tot)
+
+joined_boolean =  cell.join(exp_with_tot>threshold_expression)
+
 
 joined_boolean["Number of Htrs"] = joined_boolean[['Htr1a', 'Htr1b', 'Htr1d', 'Htr1f', 'Htr2a',
        'Htr2b', 'Htr2c', 'Htr3a', 'Htr3b', 'Htr4', 'Htr5a', 'Htr5b', 'Htr6',

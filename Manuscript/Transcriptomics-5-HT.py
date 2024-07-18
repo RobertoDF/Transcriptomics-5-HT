@@ -33,18 +33,20 @@ acknowledgements = "This study was supported by the German Research Foundation D
                 "The authors declare that they have no competing interests. "
 
 contributions = "Conceptualization, data curation, formal analysis, investigation, visualization, supervision: RDF. Writing - original draft: RDF. " \
-                "Writing - review & editing: RDF, DS. " \
+                "Writing - review & editing: RDF. " \
                 "Funding acquisition & resources: DS."
 
 data_availability = "All the code used to process the dataset is available at https://github.com/RobertoDF/Transcriptomics-5-HT. "\
                     "All figures and text can be reproduced using code present in this repository. Access to the original datasets is provided by the Allen Institute at "\
                     "https://portal.brain-map.org/atlases-and-data/bkp/abc-atlas."
 
+declaration_of_interest = "All authors declare that they have no conflicts of interest."
+
 context = {'title': title, "authors": authors, "affiliations": affiliations, "correspondence_to": correspondence_to,
            "keywords": keywords, "abstract": abstract, "introduction": introduction,
            "discussion": discussion, "methods": methods, "results": results, "legends": legends, "supplementary_legends": legends_supplementary,
            "acknowledgements": acknowledgements,
-          "data_availability": data_availability, "contributions": contributions}
+          "data_availability": data_availability, "contributions": contributions, "declaration_of_interest": declaration_of_interest}
 
 doc.render(context, autoescape=True)
 
