@@ -10,7 +10,7 @@ selected_genes_for_main_fig = ['Htr1a', 'Htr1b', 'Htr1f', 'Htr2a', 'Htr2c',
 
 legends =  {"Figure 1. Overview of Htrs translation.":
                 "(A) Bar plot showing absolute number of cells transcribing each Htrs, amount of expression is represented in greyscale, no threshold is applied. "
-                f"Inset shows the prevalence of each Htr using  a threshold (log(CPM)>{threshold_expression}). "
+                f"Inset shows the prevalence of each Htr using a threshold set at log(CPM)>{threshold_expression} and same color-coding. "
                 "(B) UMAP representation color-coded by neighborhood metadata (left), Htr1 (middle) and Htr2 (right) transcription. "
                 "(C) Htr expression prevalence in cells grouped by neurotransmitter release (top). Confusion matrix of the multi-label random forest classifier showing "
                 "true label on y axis and predicted label on x axis (middle). Matrix of absolute SHAP values for each group and receptor (bottom). Glut = Glutamate, GABA = Gamma-Aminobutyric Acid, Glut-GABA = Glutamate and Gamma-Aminobutyric Acid, Dopa = Dopamine, None = No specific neurotransmitter, GABA-Glyc = Gamma-Aminobutyric Acid and Glycine, Chol = Acetylcholine (Cholinergic), Hist = Histamine, Sero = Serotonin, Nora = Norepinephrine. "

@@ -1,7 +1,7 @@
 from Utils.Results_variables import *
 
 discussion = ("In this work we described the main transcriptional features of each Htr across the entire brain, "
-              "leveraging two datasets provided by {Yao, 2023 #2886} and {Zhang, 2023 #2887}. "
+              "leveraging two datasets provided by{Yao, 2023 #2886} and{Zhang, 2023 #2887}. "
               f"In the scRNA-seq dataset we found that Htrs RNA is transcribed in around 2 every 3 cells "#TODO add percentage
               f"and 6 Htrs were transcribed in >10% of cells, with Htr1f reaching a peak of {expression_total.max()}%. "
               f"Htrs patterns of transcription can be used to decode the identity of cells grouped by neurotransmitter, neighborhoods and classes at an above chance level. "
@@ -31,13 +31,13 @@ discussion = ("In this work we described the main transcriptional features of ea
               "Instructions are available in 'Jupyter notebooks structures' section of the methods. "
               "One constraint of our study is the indirect characterization of Htrs through the detection of RNA molecules, "
               "rather than direct assessment of their presence. "
-              "However, this potential limitation is mitigated by the fact that mRNA levels are frequently a reliable indicator of receptor expression {Vilaró, 2020 #2939}. Conversely, "
+              "However, this potential limitation is mitigated by the fact that mRNA levels are frequently a reliable indicator of receptor expression{Vilaró, 2020 #2939}. Conversely, "
               "while mapping receptors directly allows for precise localization, it fails to differentiate between pre- and postsynaptic expression, "
               "an important aspect of understanding receptor function and distribution. "
               "This lack of specificity becomes particularly problematic, for example, in the context of Sero neurons, which have "
               "extensive projections throughout the brain and exhibit diverse autoreceptors. "
               "This complexity is underscored both in our findings and in previous research, highlighting the intricate regulatory "
-              "mechanisms of serotonin neurotransmission {Hjorth, 1991 #2932; Haj-Dahmane, 1991 #2924}. "
+              "mechanisms of serotonin neurotransmission{Hjorth, 1991 #2932; Haj-Dahmane, 1991 #2924}. "
               "Our exploration of the Htrs landscape represents a substantial advancement, contributing to our understanding "
               "of the 5-HT system's role in brain function and behavior. ")
 

@@ -44,7 +44,7 @@ declaration_of_interest = "All authors declare that they have no conflicts of in
 
 context = {'title': title, "authors": authors, "affiliations": affiliations, "correspondence_to": correspondence_to,
            "keywords": keywords, "abstract": abstract, "introduction": introduction,
-           "discussion": discussion, "methods": methods, "results": results, "legends": legends, "supplementary_legends": legends_supplementary,
+           "discussion": discussion, "methods": methods, "results": results, "legends": legends,
            "acknowledgements": acknowledgements,
           "data_availability": data_availability, "contributions": contributions, "declaration_of_interest": declaration_of_interest}
 
