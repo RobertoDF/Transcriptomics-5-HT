@@ -99,7 +99,7 @@ results = {"Htrs transcription overview":
                f"2 Htrs, therefore, only in a minority of cases a cell was found to transcribe uniquely one Htr "
                f"({round((joined_boolean[joined_boolean['Any Htr']]['Number of Htrs']==1).sum()/joined_boolean.shape[0]*100, 2)}% of the totality of cells, Figure 1G). "
                f"Surprisingly, {round((joined_boolean[joined_boolean['Any Htr']]['Number of Htrs']>=5).sum()/joined_boolean['Any Htr'].sum()*100,2)}% "
-               f"of Htr-transcribing cells were found to exhibit RNA of at least 5 other Htrs.  "
+               f"of Htr-transcribing cells were found to exhibit RNA of at least 5 other Htrs. "
                f"The extensive transcription of different Htr families within the same cell points at the complexity of the 5-HT system even "
                f"at the single cell dimension. \n"
                f"To facilitate an understanding of the downstream cellular effects "
