@@ -2,7 +2,7 @@ from Utils.Settings import threshold_expression_MERFISH, threshold_enriched_clus
 
 
 methods = {"Data and code availability": "The entire analysis is hosted on Github at https://github.com/RobertoDF/Transcriptomics-5-HT and 10.6084/m9.figshare.26325505 {De Filippo, 2024 #2966}. "
-                                          "For data analysis and visualization we employed mainly pandas, numpy, matplotlib, scikit-learn and seaborn python libraries. "
+                                          "For data analysis and visualization we employed mainly pandas, numpy, matplotlib, scikit-learn, panel, holoviews and seaborn python libraries. "
                                           "Within the 'Figures' folder, 'Figure_1.ipynb' and 'Figure_2.ipynb' notebooks reproduce all figures contained in the paper. "
                                           "All parameters relative to the analysis are contained in Utils.Settings.py. "
                                           "Data is downloaded "
