@@ -1,14 +1,6 @@
 from docxtpl import DocxTemplate
-from Manuscript.abstract import abstract
-from Manuscript.results import results
-from Manuscript.discussion import discussion
-from Manuscript.introduction import introduction
-from Manuscript.methods import methods
-from Figures.legends import legends
 from Figures.legends_supplementary import legends_supplementary
 from Utils.Settings import manuscript_folder
-
-# to work with citations use {Abi-Saab, 1999 #888}. A Endnote travelling library is provided in the manuscript folder.
 
 doc = DocxTemplate(f"{manuscript_folder}/Manuscript_supplementary_template.docx")
 
@@ -32,7 +24,7 @@ context = {'title': title, "authors": authors, "affiliations": affiliations, "co
 
 doc.render(context, autoescape=True)
 
-doc.save(f"{manuscript_folder}/Transcriptomics_5-HT.docx")
+doc.save(f"{manuscript_folder}/Transcriptomics_5-HT_supplementary.docx")
 
 
 #%%
