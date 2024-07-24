@@ -61,19 +61,8 @@ legends_supplementary =  {
                                               f"(C) Prevalence of Htr6 RNA across all classes of cells in scRNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
                                               f"On the right, absolute number of cells expressing Htr6 RNA by class ranked in descending order (top ten). ",
     
-"Figure S10. Htr3a transcription": f"(A) On the left, Htr3a prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between scRNA-seq and MERFISH dataset. On the right, amount of Htr3a RNA detected using "
-                                              f"scRNA-seq (top) and MERFISH (bottom). "
-                                              f"(B) Amount of co-localization with each Htrs by cells expressing Htr3a RNA (left). Number of Htrs RNA detected in cells "
-                                              f"expressing Htr3a RNA (right). "
-                                              f"(C) Prevalence of Htr3a RNA across all classes of cells in scRNA-seq and MERFISH dataset. Inset represents the linear regression between the two datasets. "
-                                              f"On the right, absolute number of cells expressing Htr3a RNA by class ranked in descending order (top ten). "
-                                              f"(D) Prevalence of Htr3a RNA across divisions (left) and structures (right). Inset represents the proportion of cells expressing Htr3a RNA that belongs to enriched clusters. "
-                                              f"(E) Top: Prevalence of cells from enriched clusters across the antero-posterior axis, "
-                                                f"identified in the scscRNA-seq dataset and cross-referenced in the MERFISH dataset. "
-                                                f"Bottom: average amount of RNA expression found in enriched clusters cross-referenced in the MERFISH dataset. "
-                                              f"(F) Expression of Htr3a RNA detected by MERFISH in 4 representative slices. Border color represents the position on the antero-posterior axis. ",
-    
-"Figure S11. Htr3b transcription": f"(A) On the left, Htr3b prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between scRNA-seq and MERFISH dataset. On the right, amount of Htr3b RNA detected using "
+
+"Figure S10. Htr3b transcription": f"(A) On the left, Htr3b prevalence across neighborhoods with squared Pearson correlation coefficient (R²) between scRNA-seq and MERFISH dataset. On the right, amount of Htr3b RNA detected using "
                                               f"scRNA-seq (top) and MERFISH (bottom). "
                                               f"(B) Amount of co-localization with each Htrs by cells expressing Htr3b RNA (left). Number of Htrs RNA detected in cells "
                                               f"expressing Htr3b RNA (right). "
