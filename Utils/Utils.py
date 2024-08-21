@@ -125,7 +125,6 @@ def decoddddddd(joined_boolean, sel, selected_genes, n_splits):
 
     df.set_index(sel, inplace=True)
 
-    # Assuming 'df' is your DataFrame
     X = df  # Features (Htr expression levels)
     y = df.index  # Target (neurotransmitter type)
 
