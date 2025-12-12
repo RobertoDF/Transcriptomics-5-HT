@@ -2,7 +2,7 @@
 
 The complete manuscript (figures + text) can be reproduced using Python code present in this repository (See Manuscript folder). Each number present in the text is an f-String that can be traced back to a data structure (see [End2EndPaper](https://github.com/RobertoDF/End2EndPaper)).
 
-## 🟧[Online visualizer](https://rdef654875678597657-5-ht-transcriptomics.hf.space) 🧠
+## 🟥[Online visualizer](https://rdef654875678597657-5-ht-transcriptomics.hf.space) 🧠
 
 It might take a couple of minutes to load on the hugging face portal.
 
