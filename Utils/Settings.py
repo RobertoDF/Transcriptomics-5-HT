@@ -19,15 +19,15 @@ genes_families = {
 
 ## DIRECTORIES
 
-root_data = Path("/alzheimer/Roberto/Allen_Institute/")
-root_github_repo = r"/alzheimer/Roberto/Github/Transcriptomics-5-HT"
+root_data = Path("/alznew/roberto/Allen_Institute/")
+root_github_repo = r"/alznew/roberto/Github/Transcriptomics-5-HT"
 output_folder_calculations = Path(f"{root_github_repo}/Processed")
 output_folder_processed_lfps = Path(f"{root_data}/Processed_lfps")
 output_folder = Path(f"{root_github_repo}/Output_figures")
 output_folder_supplementary = Path(f"{root_github_repo}/Output_figures/Supplementary")
 manuscript_folder = Path(f"{root_github_repo}/Manuscript")
 utils_folder = Path(f"{root_github_repo}/Utils")
-root_visualizer_data = Path('/alzheimer/Roberto/Github/Transcriptomics-5-HT-huggingface/Data/')
+root_visualizer_data = Path('/alznew/roberto/Github/Transcriptomics-5-HT-huggingface/Data/')
 
 version = '20230830'
 download_base = Path(f"{root_data}/abc_download_root")
